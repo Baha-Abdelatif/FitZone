@@ -1442,11 +1442,10 @@ select.form-control {
 }
 
 .map-placeholder {
-  background: linear-gradient(135deg, #1a2035, #0e1830);
+  background: url('img/map.png') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
   position: relative;
   overflow: hidden;
 }
@@ -1455,10 +1454,7 @@ select.form-control {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(90deg, transparent, transparent 40px,
-      rgba(53, 117, 212, 0.04) 40px, rgba(53, 117, 212, 0.04) 41px),
-    repeating-linear-gradient(0deg, transparent, transparent 40px,
-      rgba(53, 117, 212, 0.04) 40px, rgba(53, 117, 212, 0.04) 41px);
+  background: rgba(10, 16, 32, 0.45);
 }
 
 .map-info {
@@ -1566,7 +1562,7 @@ select.form-control {
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: var(--brun-noir);
+  background: url('img/rejoindre_zone.jpg') center / cover no-repeat;
 }
 
 .cta-band::before {
@@ -1574,8 +1570,8 @@ select.form-control {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(196, 82, 40, 0.07) 0%, transparent 70%),
-    repeating-linear-gradient(45deg, transparent, transparent 4px, rgba(255, 255, 255, 0.007) 4px, rgba(255, 255, 255, 0.007) 5px);
+    linear-gradient(160deg, rgba(22, 14, 10, 0.88) 0%, rgba(22, 14, 10, 0.72) 50%, rgba(22, 14, 10, 0.88) 100%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(196, 82, 40, 0.12) 0%, transparent 70%);
 }
 
 .cta-band>.container {
@@ -1619,7 +1615,7 @@ select.form-control {
   padding: 130px 0;
   text-align: center;
   overflow: hidden;
-  background: var(--navy);
+  background: url('img/special_surf.jpg') center / cover no-repeat;
 }
 
 .surf-section::before {
@@ -1627,7 +1623,7 @@ select.form-control {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(160deg, rgba(26, 18, 16, 0.7) 0%, transparent 50%, rgba(26, 18, 16, 0.5) 100%),
+    linear-gradient(160deg, rgba(8, 16, 36, 0.88) 0%, rgba(8, 16, 36, 0.72) 50%, rgba(8, 16, 36, 0.88) 100%),
     repeating-linear-gradient(135deg, transparent, transparent 20px, rgba(255, 255, 255, 0.01) 20px, rgba(255, 255, 255, 0.01) 21px);
 }
 
