@@ -58,7 +58,7 @@
 ║  │ 🏋️ MUSCU │  │ 💥 COURS │  │ 🧒 KID  │  │ 💆 MASSA │       ║
 ║  │ Plateau  │  │ Collect. │  │  ZONE    │  │  GES     │       ║
 ║  │ complet  │  │ 4 famil- │  │ Garderie │  │ Récup.   │       ║
-║  │ haltères │  │ les de   │  │ pendant  │  │ 1h, 80€  │       ║
+║  │ haltères │  │ les de   │  │ pendant  │  │ 1h, 80 €  │       ║
 ║  │ rack...  │  │ cours    │  │ l'effort │  │ sportif  │       ║
 ║  │          │  │          │  │          │  │          │       ║
 ║  │ [→]      │  │ [→]      │  │ [→]      │  │ [→]      │       ║
@@ -87,7 +87,7 @@
 ║  │  ENGAGEMENT  │  │ SANS ENGAGE. │  │ PASS & UNITÉ │          ║
 ║  │──────────────│  │──────────────│  │──────────────│          ║
 ║  │              │  │  ★ POPULAIRE │  │              │          ║
-║  │   40€/mois   │  │   50€/mois   │  │  dès 15€     │          ║
+║  │   40 €/mois   │  │   50 €/mois   │  │  dès 15 €     │          ║
 ║  │   (#ff5c31   │  │   (#ff5c31   │  │  (#ff5c31    │          ║
 ║  │    XXL)      │  │    XXL)      │  │   XXL)       │          ║
 ║  │              │  │              │  │              │          ║
@@ -97,14 +97,14 @@
 ║  │ ✓ Cross-T    │  │ ✓ Cross-T    │  │ ✓ Cross-T    │          ║
 ║  │ ✓ Cardio     │  │ ✓ Cardio     │  │ ✓ Cardio     │          ║
 ║  │              │  │              │  │              │          ║
-║  │ Frais: 50€   │  │ Frais: 50€   │  │ Sans frais   │          ║
+║  │ Frais: 50 €   │  │ Frais: 50 €   │  │ Sans frais   │          ║
 ║  │              │  │              │  │              │          ║
 ║  │[JE CHOISIS]  │  │[JE CHOISIS]  │  │[JE CHOISIS]  │          ║
 ║  │(outline      │  │(#ff5c31 plein│  │(outline      │          ║
 ║  │ #ffffff)     │  │ mis en avant)│  │ #ffffff)     │          ║
 ║  └──────────────┘  └──────────────┘  └──────────────┘          ║
 ║                                                                ║
-║  Lien discret : « Tarifs jeunes & étudiants dès 30€/mois → »  ║
+║  Lien discret : « Tarifs jeunes & étudiants dès 30 €/mois → »  ║
 ║  Lien discret : « Options garderie et massage → »              ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  SECTION SURF — fond photo surf pleine largeur + overlay       ║
@@ -131,7 +131,7 @@
 ║  │                      │                               │      ║
 ║  │   (coins arrondis,   │  • Encadrement qualifié       │      ║
 ║  │    ton plus doux,    │  • Espace sécurisé & ludique  │      ║
-║  │    couleurs chaudes) │  • Dès 10€ / séance           │      ║
+║  │    couleurs chaudes) │  • Dès 10 € / séance           │      ║
 ║  │                      │  • Inclus dans certains abo.  │      ║
 ║  │                      │                               │      ║
 ║  │                      │  [EN SAVOIR PLUS] (#aa491b)   │      ║
@@ -173,7 +173,7 @@
 ║  │    (A4 SPEED Bold, #ffffff, grande taille)                │   ║
 ║  │                                                          │   ║
 ║  │    [JE PRENDS MON ABONNEMENT] (#ff5c31, XL)              │   ║
-║  │    ou « Essayer une séance → 15€ » (#b7ada4, lien)       │   ║
+║  │    ou « Essayer une séance → 15 € » (#b7ada4, lien)       │   ║
 ║  │                                                          │   ║
 ║  └──────────────────────────────────────────────────────────┘   ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -273,7 +273,7 @@
 ╠══════════════════════════════════════════════════════════════════╣
 ║  NOS ENGAGEMENTS — fond #ffffff                                ║
 ║  ┌──────────────────────────────────────────────────────────┐   ║
-║  │ ✓ Tarifs jeunes dès 30€/mois                             │   ║
+║  │ ✓ Tarifs jeunes dès 30 €/mois                             │   ║
 ║  │ ✓ 4 familles de cours, du HIIT au Yoga                   │   ║
 ║  │ ✓ Garderie intégrée pour les parents                     │   ║
 ║  │ ✓ Programmes Spécial Surf                                │   ║
@@ -314,7 +314,7 @@
 ║  │              │  │  + GARDERIE  │  │  ÉTUDIANT    │          ║
 ║  │──────────────│  │──────────────│  │──────────────│          ║
 ║  │              │  │  👶 KIDZONE  │  │  🎓 16-18 ans│          ║
-║  │   40€/mois   │  │   60€/mois   │  │   30€/mois   │          ║
+║  │   40 €/mois   │  │   60 €/mois   │  │   30 €/mois   │          ║
 ║  │   (avec eng.)│  │   (avec eng.)│  │   (avec eng.)│          ║
 ║  │              │  │              │  │              │          ║
 ║  │ ✓ Full Access│  │ ✓ Full Access│  │ ✓ Full Access│          ║
@@ -323,17 +323,17 @@
 ║  │              │  │   incluse    │  │              │          ║
 ║  │              │  │              │  │              │          ║
 ║  │ Frais dossier│  │ Frais dossier│  │ Frais dossier│          ║
-║  │ 50€ (1 fois) │  │ 50€ (1 fois) │  │ 50€ (1 fois) │          ║
+║  │ 50 € (1 fois) │  │ 50 € (1 fois) │  │ 50 € (1 fois) │          ║
 ║  │              │  │              │  │              │          ║
 ║  │ Total annuel │  │ Total annuel │  │ Total annuel │          ║
-║  │ 530€         │  │ 770€         │  │ 410€         │          ║
+║  │ 530 €         │  │ 770 €         │  │ 410 €         │          ║
 ║  │              │  │              │  │              │          ║
 ║  │ [CHOISIR]    │  │ [CHOISIR]    │  │ [CHOISIR]    │          ║
 ║  │ (#ff5c31)    │  │ (#ff5c31)    │  │ (#ff5c31)    │          ║
 ║  └──────────────┘  └──────────────┘  └──────────────┘          ║
 ║                                                                ║
 ║  Note sous les cards :                                         ║
-║  « Sans engagement : +10€/mois · Résiliation libre »          ║
+║  « Sans engagement : +10 €/mois · Résiliation libre »          ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  PASS PONCTUELS — fond #101010, texte #ffffff                  ║
 ║  Titre : « ENVIE DE TESTER ? »                                 ║
@@ -342,7 +342,7 @@
 ║  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐       ║
 ║  │6 MOIS  │ │3 MOIS  │ │1 MOIS  │ │1 SEMAINE│ │SÉANCE  │       ║
 ║  │        │ │        │ │        │ │        │ │UNITÉ   │       ║
-║  │ 350€   │ │ 210€   │ │  80€   │ │  50€   │ │  15€   │       ║
+║  │ 350 €   │ │ 210 €   │ │  80 €   │ │  50 €   │ │  15 €   │       ║
 ║  │        │ │        │ │        │ │        │ │        │       ║
 ║  │en 1x   │ │en 1x   │ │en 1x   │ │en 1x   │ │en 1x   │       ║
 ║  │        │ │        │ │        │ │        │ │ ★ BEST │       ║
@@ -354,7 +354,7 @@
 ║  SERVICES À L'UNITÉ — fond #47403a, texte #ffffff              ║
 ║  ┌────────────────────────────┬────────────────────────────┐   ║
 ║  │  🧒 GARDERIE À L'UNITÉ    │  💆 MASSAGE 1H             │   ║
-║  │     10€ / séance           │     80€ / séance           │   ║
+║  │     10 € / séance           │     80 € / séance           │   ║
 ║  │  [RÉSERVER]                │  [RÉSERVER]                │   ║
 ║  └────────────────────────────┴────────────────────────────┘   ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -371,7 +371,7 @@
 ╠══════════════════════════════════════════════════════════════════╣
 ║  CTA — fond #101010                                            ║
 ║  « PRÊT ? » [S'ABONNER EN LIGNE] (#ff5c31)                    ║
-║  ou « Tester avec une séance à 15€ → »                         ║
+║  ou « Tester avec une séance à 15 € → »                         ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  [FOOTER]                                                      ║
 ╚══════════════════════════════════════════════════════════════════╝
@@ -471,7 +471,7 @@
 ╠══════════════════════════════════════════════════════════════════╣
 ║  CTA — fond #0e2640                                            ║
 ║  [RÉSERVER MON PREMIER COURS] (#ff5c31)                        ║
-║  « Première séance à 15€ – sans engagement »                   ║
+║  « Première séance à 15 € – sans engagement »                   ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  [FOOTER]                                                      ║
 ╚══════════════════════════════════════════════════════════════════╝
@@ -542,7 +542,7 @@
 ║  ┌────────────────────────────┬────────────────────────────┐   ║
 ║  │  GARDERIE À L'UNITÉ       │  INCLUSE DANS ABONNEMENT   │   ║
 ║  │                            │                            │   ║
-║  │      10€ / séance          │  +20€/mois sur votre       │   ║
+║  │      10 € / séance          │  +20 €/mois sur votre       │   ║
 ║  │                            │  abonnement mensuel        │   ║
 ║  │  Parfait pour tester.      │                            │   ║
 ║  │                            │  Accès illimité à la       │   ║
@@ -596,7 +596,7 @@
 ║  │                      │  • Détente profonde           │      ║
 ║  │                      │                               │      ║
 ║  │                      │  ┌────────────────────────┐   │      ║
-║  │                      │  │ 80€ / séance (1h)      │   │      ║
+║  │                      │  │ 80 € / séance (1h)      │   │      ║
 ║  │                      │  │ (#ff5c31, grande       │   │      ║
 ║  │                      │  │  taille)               │   │      ║
 ║  │                      │  └────────────────────────┘   │      ║
@@ -868,8 +868,8 @@
 ║  │            │ │  └──────────┘ └──────────┘ └────────┘│      ║
 ║  │            │ │                                       │      ║
 ║  │            │ │  Dernières factures                    │      ║
-║  │            │ │  Mars 2026 — 50€ [Télécharger]        │      ║
-║  │            │ │  Fév. 2026 — 50€ [Télécharger]        │      ║
+║  │            │ │  Mars 2026 — 50 € [Télécharger]        │      ║
+║  │            │ │  Fév. 2026 — 50 € [Télécharger]        │      ║
 ║  └────────────┘ └───────────────────────────────────────┘      ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  [FOOTER]                                                      ║

@@ -45,9 +45,9 @@ Le ton s'adapte spécifiquement à ce lecteur : l'usage du vouvoiement et d'un v
 **Son contexte :** Âgé de 16 à 25 ans, sur le secteur Hossegor-Bayonne, il est séduit par l'ambiance du club. Il a besoin de confirmer que cette offre premium est accessible à son budget.
 
 **L'expérience que le site lui offre :**
-Son offre dédiée est valorisée au premier plan sur la page Tarifs. Elle dispose de sa propre carte de présentation, au même niveau que les formules standard, soutenue par une couleur d'accent pour capter l'attention. L'offre à partir de 30 €/mois est affichée en toute transparence.
+Son offre dédiée est valorisée au premier plan sur la page Tarifs. Elle dispose de sa propre carte de présentation, au même niveau que les formules standard, soutenue par une couleur d'accent pour capter l'attention. L'offre à partir de 30  €/mois est affichée en toute transparence.
 
-La séance découverte à 15 € joue un rôle d'accélérateur : elle lui offre une porte d'entrée abordable et sereine. Présente en appel à l'action (CTA) sur plusieurs pages stratégiques, elle est renforcée par le témoignage de Lucas T. (étudiant, Hossegor), qui valide la pertinence du club pour ce public. 
+La séance découverte à 15  € joue un rôle d'accélérateur : elle lui offre une porte d'entrée abordable et sereine. Présente en appel à l'action (CTA) sur plusieurs pages stratégiques, elle est renforcée par le témoignage de Lucas T. (étudiant, Hossegor), qui valide la pertinence du club pour ce public. 
 
 L'ensemble du parcours lui confirme qu'il est le bienvenu.
 
@@ -153,7 +153,7 @@ Mon approche proactive vous assure une livraison de haute qualité tout en antic
 | | |
 |---|---|
 | **Délai de réalisation** | 5 jours ouvrés |
-| **Investissement** | 1 500 € HT |
+| **Investissement** | 1 500  € HT |
 | **TVA** | Non applicable - Art. 293 B du CGI |
 | **Environnement** | CMS Wix |
 
