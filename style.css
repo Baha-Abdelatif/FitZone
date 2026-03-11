@@ -596,9 +596,10 @@ a {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top,
-      rgba(26, 18, 16, 0.95) 0%,
-      rgba(26, 18, 16, 0.4) 50%,
-      transparent 100%);
+      rgba(26, 18, 16, 0.97) 0%,
+      rgba(26, 18, 16, 0.85) 30%,
+      rgba(26, 18, 16, 0.3) 55%,
+      transparent 70%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -608,9 +609,10 @@ a {
 
 .espace-card:hover .espace-overlay {
   background: linear-gradient(to top,
-      rgba(196, 82, 40, 0.85) 0%,
-      rgba(26, 18, 16, 0.5) 60%,
-      transparent 100%);
+      rgba(196, 82, 40, 0.95) 0%,
+      rgba(196, 82, 40, 0.7) 35%,
+      rgba(26, 18, 16, 0.2) 60%,
+      transparent 75%);
 }
 
 .espace-icon {
@@ -1994,7 +1996,8 @@ select.form-control {
    Style "DO LESS WITH MORE FOCUS." mural / typographie murale noire
    ============================================================ */
 .section-mural {
-  background: var(--acier-noir);
+  background: linear-gradient(160deg, rgba(14, 14, 14, 0.85) 0%, rgba(14, 14, 14, 0.70) 50%, rgba(14, 14, 14, 0.85) 100%),
+    url('img/focus.jpg') center / cover no-repeat;
   border-top: 1px solid var(--gris-metal);
   border-bottom: 1px solid var(--gris-metal);
   padding: 88px 0;
