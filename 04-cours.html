@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Nos Cours & Planning</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-cours {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    .section-header-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .cours-section-label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--terracotta);
+    }
+
+    .cours-section-label h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin: 0;
+    }
+
+    .cours-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+
+    .cours-surf-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 0;
+    }
+
+    .cours-card-full {
+      background: var(--anthracite-md);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .cours-card-full:hover {
+      transform: translateY(-6px);
+      border-color: rgba(196, 82, 40, 0.4);
+    }
+
+    .cours-card-img-full {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 36px;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .cours-card-body-full {
+      padding: 20px;
+    }
+
+    .cours-card-name-full {
+      font-family: var(--font-display);
+      font-size: 17px;
+      color: var(--creme);
+      margin: 10px 0 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .cours-duration {
+      font-size: 12px;
+      color: var(--terracotta);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .cours-desc {
+      font-size: 13px;
+      color: var(--beige);
+      line-height: 1.65;
+    }
+
+    /* Surf section override */
+    .surf-cours-card {
+      background: rgba(14, 32, 64, 0.6);
+      border: 1px solid rgba(53, 117, 212, 0.2);
+    }
+
+    .surf-cours-card:hover {
+      border-color: rgba(53, 117, 212, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html" class="active">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-50 hero-cours texture-verriere">
+    <div class="hero-content">
+      <span class="eyebrow">COURS COLLECTIFS</span>
+      <h1 class="display display-lg" style="color:var(--creme);margin-bottom:20px;">VOTRE PROGRAMME,<br>VOTRE OBJECTIF
+      </h1>
+      <p style="font-size:18px;color:var(--beige);line-height:1.7;max-width:560px;margin:0 auto;">
+        40+ cours par semaine · 4 disciplines · Tous niveaux
+      </p>
+    </div>
+  </section>
+
+  <!-- NOS COURS -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Programme</span>
+        <h2 class="section-title">NOS COURS</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Des disciplines pour tous les objectifs et tous les niveaux
+        </p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="filters">
+        <button class="filter-btn active">TOUS</button>
+        <button class="filter-btn">CARDIO</button>
+        <button class="filter-btn">RENFORCEMENT</button>
+        <button class="filter-btn">SOUPLESSE</button>
+        <button class="filter-btn">SURF</button>
+      </div>
+
+      <!-- CARDIO -->
+      <div class="cours-section-label">
+        <span class="badge badge-cardio">Cardio</span>
+        <h3>CARDIO &amp; DANSE</h3>
+      </div>
+      <div class="cours-3col">
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#2a1800,#8b3012);">STP</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-cardio">Cardio</span>
+            <div class="cours-card-name-full">STEP</div>
+            <div class="cours-duration">/// 45 min</div>
+            <p class="cours-desc">Travail cardio dynamique avec step. Coordination, rythme et endurance. Accessible à
+              tous les niveaux.</p>
+          </div>
+        </div>
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#1e1a00,#6b5010);">XTR</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-cardio">Cardio</span>
+            <div class="cours-card-name-full">BODY ATTACK / HIIT</div>
+            <div class="cours-duration">/// 45 min</div>
+            <p class="cours-desc">Haute intensité, intervalles explosifs. Brûle les calories, booste l'endurance
+              cardiovasculaire. Niveau intermédiaire à avancé.</p>
+          </div>
+        </div>
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#1e0a10,#6b1830);">ZMB</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-cardio">Cardio</span>
+            <div class="cours-card-name-full">ZUMBA</div>
+            <div class="cours-duration">/// 60 min</div>
+            <p class="cours-desc">Danse cardio festive sur des rythmes latins. On s'amuse en transpirant. Aucun
+              prérequis, venez comme vous êtes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RENFORCEMENT -->
+      <div class="cours-section-label">
+        <span class="badge badge-renfo">Renforcement</span>
+        <h3>RENFORCEMENT MUSCULAIRE</h3>
+      </div>
+      <div class="cours-3col">
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#1a1200,#503010);">PMP</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-renfo">Renfo.</span>
+            <div class="cours-card-name-full">BODY PUMP</div>
+            <div class="cours-duration">/// 45 min</div>
+            <p class="cours-desc">Musculation en musique avec barres et haltères. Renforcement global, tonification,
+              résistance musculaire. Idéal débutants.</p>
+          </div>
+        </div>
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#121000,#3a2800);">CTR</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-renfo">Renfo.</span>
+            <div class="cours-card-name-full">CIRCUIT TRAINING</div>
+            <div class="cours-duration">/// 45 min</div>
+            <p class="cours-desc">Enchaînement de stations fonctionnelles. Cardio + force en alternance. Haute
+              intensité, maximum de résultats.</p>
+          </div>
+        </div>
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#1e1000,#5a2810);">COR</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-renfo">Renfo.</span>
+            <div class="cours-card-name-full">ABDO / CORE</div>
+            <div class="cours-duration">/// 30 min</div>
+            <p class="cours-desc">Travail ciblé de la sangle abdominale et du gainage profond. La ceinture de force pour
+              tous vos sports.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOUPLESSE -->
+      <div class="cours-section-label">
+        <span class="badge badge-souplesse">Souplesse</span>
+        <h3>SOUPLESSE &amp; BIEN-ÊTRE</h3>
+      </div>
+      <div class="cours-3col">
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#101018,#202030);">YGA</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-souplesse">Souplesse</span>
+            <div class="cours-card-name-full">YOGA</div>
+            <div class="cours-duration">/// 60 min</div>
+            <p class="cours-desc">Postures, respiration, méditation. Le corps et l'esprit avancent ensemble. Cours pour
+              tous les niveaux, de débutant à confirmé.</p>
+          </div>
+        </div>
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#121018,#202038);">PLT</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-souplesse">Souplesse</span>
+            <div class="cours-card-name-full">PILATES</div>
+            <div class="cours-duration">/// 60 min</div>
+            <p class="cours-desc">Renforcement profond, posture, équilibre. Une méthode douce pour un corps fort de
+              l'intérieur. Parfait pour compléter votre entraînement.</p>
+          </div>
+        </div>
+        <div class="cours-card-full">
+          <div class="cours-card-img-full" style="background:linear-gradient(160deg,#141410,#282820);">STR</div>
+          <div class="cours-card-body-full">
+            <span class="badge badge-souplesse">Souplesse</span>
+            <div class="cours-card-name-full">STRETCHING</div>
+            <div class="cours-duration">/// 30 min</div>
+            <p class="cours-desc">Étirements profonds, récupération active. Idéal après une séance de musculation ou de
+              cardio. Prévenez les blessures.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SURF -->
+      <div class="cours-section-label" style="border-bottom-color:rgba(53,117,212,0.5);">
+        <span class="badge badge-surf">/// Spécial Surf</span>
+        <h3 style="color:var(--creme);">PROGRAMME SPÉCIAL SURF</h3>
+      </div>
+      <div
+        style="background:rgba(14,32,64,0.4);border:1px solid rgba(53,117,212,0.15);border-radius:var(--radius-lg);padding:32px;margin-bottom:0;">
+        <p style="color:var(--beige);font-size:15px;line-height:1.75;margin-bottom:28px;">Conçus par des passionnés de
+          Capbreton, ces cours préparent votre corps aux exigences du surf : explosivité pour les manœuvres, endurance
+          pour le line-up, souplesse pour les rotations.</p>
+        <div class="cours-surf-2col">
+          <div class="cours-card-full surf-cours-card">
+            <div class="cours-card-img-full" style="background:linear-gradient(160deg,#0a1828,#1a3060);">XPL</div>
+            <div class="cours-card-body-full">
+              <span class="badge badge-surf">Surf</span>
+              <div class="cours-card-name-full">EXPLOSIVITÉ &amp; PUISSANCE</div>
+              <div class="cours-duration" style="color:#6ba0e8;">/// 30 min</div>
+              <p class="cours-desc">Exercices pliométriques et plyométriques pour développer la puissance de pop-up, la
+                vitesse de pédalage et l'explosivité dans les manœuvres.</p>
+            </div>
+          </div>
+          <div class="cours-card-full surf-cours-card">
+            <div class="cours-card-img-full" style="background:linear-gradient(160deg,#0e2040,#1a4060);">RAM</div>
+            <div class="cours-card-body-full">
+              <span class="badge badge-surf">Surf</span>
+              <div class="cours-card-name-full">ENDURANCE RAME</div>
+              <div class="cours-duration" style="color:#6ba0e8;">/// 30 min</div>
+              <p class="cours-desc">Circuit spécifique épaules, dos et gainage pour améliorer l'endurance de rame,
+                réduire la fatigue en session longue et prévenir les blessures d'épaule.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION MURALE -->
+  <div class="section-mural">
+    <div class="mur-texte-watermark">COURS</div>
+    <div class="container">
+      <div class="citation-rule"></div>
+      <p class="citation-murale">TRANSCENDE<br><span class="accent">TES LIMITES.</span></p>
+    </div>
+  </div>
+
+  <!-- PLANNING HEBDOMADAIRE -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Organisation</span>
+        <h2 class="section-title">PLANNING DE LA SEMAINE</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Réservation recommandée · Places limitées à 20 personnes par
+          cours</p>
+      </div>
+
+      <!-- Filtres jours -->
+      <div class="filters">
+        <button class="filter-btn active">TOUS LES JOURS</button>
+        <button class="filter-btn">LUNDI</button>
+        <button class="filter-btn">MARDI</button>
+        <button class="filter-btn">MERCREDI</button>
+        <button class="filter-btn">JEUDI</button>
+        <button class="filter-btn">VENDREDI</button>
+        <button class="filter-btn">SAMEDI</button>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="planning-table">
+          <thead>
+            <tr>
+              <th style="min-width:80px;">HEURE</th>
+              <th>LUNDI</th>
+              <th>MARDI</th>
+              <th>MERCREDI</th>
+              <th>JEUDI</th>
+              <th>VENDREDI</th>
+              <th>SAMEDI</th>
+              <th>DIMANCHE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:var(--grege);font-weight:700;font-size:11px;letter-spacing:0.08em;">07H00</td>
+              <td>
+                <div class="planning-slot">
+                  <strong>BODY PUMP</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>YOGA</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="planning-slot">
+                  <strong>BODY PUMP</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>PILATES</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="color:var(--grege);font-weight:700;font-size:11px;letter-spacing:0.08em;">09H00</td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>PILATES</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot surf">
+                  <strong>EXPLOS. SURF</strong>
+                  <span class="coach">→ Julien</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>ZUMBA</strong>
+                  <span class="coach">· Anaïs</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot surf">
+                  <strong>ENDUR. RAME</strong>
+                  <span class="coach">→ Julien</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>YOGA</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>ZUMBA</strong>
+                  <span class="coach">· Anaïs</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>YOGA</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="color:var(--grege);font-weight:700;font-size:11px;letter-spacing:0.08em;">12H00</td>
+              <td>
+                <div class="planning-slot">
+                  <strong>ABDO / CORE</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>CIRCUIT TRAIN.</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="planning-slot">
+                  <strong>ABDO / CORE</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>HIIT</strong>
+                  <span class="coach">· Anaïs</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="color:var(--grege);font-weight:700;font-size:11px;letter-spacing:0.08em;">17H30</td>
+              <td>
+                <div class="planning-slot">
+                  <strong>STEP</strong>
+                  <span class="coach">· Anaïs</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>STRETCHING</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>BODY PUMP</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>PILATES</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>ZUMBA</strong>
+                  <span class="coach">· Anaïs</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot surf">
+                  <strong>EXPLOS. SURF</strong>
+                  <span class="coach">→ Julien</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td style="color:var(--grege);font-weight:700;font-size:11px;letter-spacing:0.08em;">19H00</td>
+              <td>
+                <div class="planning-slot">
+                  <strong>CIRCUIT TRAIN.</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>HIIT</strong>
+                  <span class="coach">· Anaïs</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>YOGA</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot">
+                  <strong>BODY PUMP</strong>
+                  <span class="coach">· Thomas</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot yoga">
+                  <strong>STRETCHING</strong>
+                  <span class="coach">· Camille</span>
+                </div>
+              </td>
+              <td>
+                <div class="planning-slot surf">
+                  <strong>ENDUR. RAME</strong>
+                  <span class="coach">→ Julien</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center;color:var(--grege);font-size:13px;margin-top:24px;font-style:italic;">
+        Planning sous réserve de modifications · Réservation recommandée · Places limitées à 20 personnes
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">COURS</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Passer à l'action</span>
+      <h2 class="section-title" style="margin-bottom:16px;">RÉSERVER MON PREMIER COURS<br><span style="color:var(--terracotta);">15€ SANS ENGAGEMENT</span></h2>
+      <p class="cta-subtitle">Accès à tous les cours de la journée</p>
+      <div class="cta-actions">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">RÉSERVER MA SÉANCE → 15€</a>
+        <a href="03-tarifs.html" class="btn btn-outline btn-xl">Voir les abonnements</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">04 · COURS</div>
+</body>
+
+</html>

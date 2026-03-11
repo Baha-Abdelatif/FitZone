@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Massages & Bien-être</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-bienetre {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    .section-header-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .benefices-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .benefices-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15px;
+      color: var(--beige);
+      line-height: 1.6;
+    }
+
+    .benefices-list li .check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(196, 82, 40, 0.15);
+      border: 1px solid rgba(196, 82, 40, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--terracotta);
+      font-weight: 800;
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .praticien-visual {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, var(--navy), #1a3060);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 48px;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.4);
+      border: 3px solid rgba(196, 82, 40, 0.3);
+      margin: 0 auto 28px;
+    }
+
+    .calendrier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .calendrier-table thead th {
+      background: var(--anthracite);
+      padding: 12px 10px;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--creme);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .calendrier-table td {
+      padding: 10px 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+      font-size: 12px;
+      color: var(--grege);
+    }
+
+    .slot-dispo {
+      background: rgba(196, 82, 40, 0.12);
+      border: 1px solid rgba(196, 82, 40, 0.3);
+      border-radius: 4px;
+      padding: 5px 8px;
+      color: var(--creme);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+
+    .slot-dispo:hover {
+      background: rgba(196, 82, 40, 0.3);
+    }
+
+    .slot-pris {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      padding: 5px 8px;
+      color: var(--grege);
+      font-size: 11px;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html" class="active">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-50 hero-bienetre texture-metal">
+    <div class="hero-content">
+      <span class="eyebrow">BIEN-ÊTRE &amp; RÉCUPÉRATION</span>
+      <h1 class="display display-lg" style="color:var(--creme);margin-bottom:20px;white-space:pre-line;">RÉCUPÉREZ
+        MIEUX.
+        PERFORMEZ PLUS.</h1>
+      <p style="font-size:18px;color:var(--beige);line-height:1.7;max-width:560px;margin:0 auto;">
+        Le massage sportif professionnel pour accélérer votre récupération, prévenir les blessures et retrouver votre
+        pleine capacité.
+      </p>
+    </div>
+  </section>
+
+  <!-- LE SERVICE SPLIT -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="split">
+        <div
+          style="background:var(--navy);border-radius:var(--radius-xl);padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px;aspect-ratio:4/3;">
+          <div style="font-family:var(--font-display);font-size:52px;color:rgba(255,255,255,0.25);letter-spacing:0.06em;">SPA</div>
+          <span class="badge badge-surf" style="font-size:12px;padding:8px 20px;">MASSAGE SPORTIF · 1H</span>
+          <div style="font-family:var(--font-display);font-size:52px;color:var(--terracotta);line-height:1;">80€</div>
+          <div style="font-size:14px;color:var(--beige);">/séance · 1 heure complète</div>
+        </div>
+        <div class="split-text-accent">
+          <span class="eyebrow">Le service</span>
+          <h2 class="section-title" style="margin-bottom:24px;">MASSAGE SPORTIF PROFESSIONNEL</h2>
+          <p style="color:var(--beige);font-size:16px;line-height:1.8;margin-bottom:28px;">
+            Intégré directement dans le club Fit Zone, notre service de massage sportif est dispensé par un praticien
+            diplômé spécialisé dans la récupération athlétique.
+          </p>
+          <ul class="benefices-list">
+            <li>
+              <span class="check">✓</span>
+              <span><strong style="color:var(--creme);">Récupération musculaire accélérée</strong> — Élimination des toxines, réduction des
+                courbatures</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span><strong style="color:var(--creme);">Réduction des courbatures</strong> — Technique de drainage et effleurage profond</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span><strong style="color:var(--creme);">Prévention des blessures</strong> — Détection et traitement des tensions musculaires</span>
+            </li>
+            <li>
+              <span class="check">✓</span>
+              <span><strong style="color:var(--creme);">Détente profonde</strong> — Libération du stress physique et mental</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION MURALE -->
+  <div class="section-mural">
+    <div class="mur-texte-watermark">BIENETRE</div>
+    <div class="container">
+      <div class="citation-rule"></div>
+      <p class="citation-murale">RÉCUPÈRE.<br><span class="accent">RECOMMENCE.</span></p>
+    </div>
+  </div>
+
+  <!-- LES 4 BÉNÉFICES -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Pourquoi le massage sportif</span>
+        <h2 class="section-title">LES BÉNÉFICES</h2>
+        <p class="section-subtitle" style="margin:0 auto;">La récupération fait partie de l'entraînement</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-icon" style="font-family:var(--font-display);font-size:22px;letter-spacing:0.06em;color:var(--terracotta);">REC</span>
+          <div class="value-title">RÉCUPÉRATION MUSCULAIRE</div>
+          <p class="value-desc">Accélère l'élimination de l'acide lactique et des déchets métaboliques. Retour à la
+            performance 30% plus rapide selon les études.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon" style="font-family:var(--font-display);font-size:22px;letter-spacing:0.06em;color:var(--terracotta);">PRV</span>
+          <div class="value-title">PRÉVENTION DES BLESSURES</div>
+          <p class="value-desc">Identification et traitement préventif des zones de tension. Amélioration de la
+            souplesse et de l'amplitude articulaire.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon" style="font-family:var(--font-display);font-size:22px;letter-spacing:0.06em;color:var(--terracotta);">ZEN</span>
+          <div class="value-title">DÉTENTE PROFONDE</div>
+          <p class="value-desc">Libération des tensions accumulées, réduction du cortisol, amélioration de la qualité du
+            sommeil et de la récupération nocturne.</p>
+        </div>
+        <div class="value-card" style="grid-column:2;">
+          <span class="value-icon" style="font-family:var(--font-display);font-size:22px;letter-spacing:0.06em;color:var(--terracotta);">XTR</span>
+          <div class="value-title">RETOUR À LA PERFORMANCE</div>
+          <p class="value-desc">Résistance accrue aux blessures de surcharge, maintien des capacités physiques sur la
+            durée. Performer sans s'user.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LE PRATICIEN -->
+  <section class="section" style="background:var(--anthracite-md);">
+    <div class="container">
+      <div class="split">
+        <div style="text-align:center;">
+          <div class="praticien-visual">NM</div>
+          <div
+            style="font-family:var(--font-display);font-size:22px;color:var(--creme);margin-bottom:8px;letter-spacing:0.05em;">
+            NICOLAS M.</div>
+          <div
+            style="color:var(--terracotta);font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">
+            Praticien certifié</div>
+          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">
+            <span class="badge badge-surf">Diplômé Massage Sportif</span>
+            <span class="badge badge-renfo">Kinésithérapie Sport</span>
+          </div>
+        </div>
+        <div class="split-text-accent">
+          <span class="eyebrow">Votre praticien</span>
+          <h2 class="section-title" style="margin-bottom:24px;">UN EXPERT À VOS CÔTÉS</h2>
+          <p style="color:var(--beige);font-size:16px;line-height:1.8;margin-bottom:20px;">
+            Nicolas est diplômé en massage sportif et kinésithérapie du sport. Avec 8 ans d'expérience auprès d'athlètes
+            de haut niveau et de sportifs amateurs, il adapte chaque séance à vos besoins.
+          </p>
+          <p style="color:var(--beige);font-size:16px;line-height:1.8;margin-bottom:20px;">
+            Spécialisé dans les sports de glisse et les sports de force, il comprend les contraintes spécifiques du
+            surf, de la muscu et des sports collectifs.
+          </p>
+          <blockquote style="border-left:3px solid var(--terracotta);padding-left:24px;margin:0;">
+            <p style="color:var(--creme);font-size:16px;font-style:italic;line-height:1.8;">"La récupération n'est pas
+              un luxe, c'est la condition du progrès. Mon rôle est de vous permettre de vous entraîner plus longtemps,
+              plus fort, sans vous blesser."</p>
+            <footer style="color:var(--grege);font-size:13px;margin-top:12px;">— Nicolas M., Praticien Massage Sportif
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉSERVATION CALENDRIER -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Planification</span>
+        <h2 class="section-title">RÉSERVEZ VOTRE CRÉNEAU</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Disponibilités de la semaine · Créneaux de 1 heure</p>
+      </div>
+
+      <div
+        style="max-width:760px;margin:0 auto 40px;background:var(--anthracite-md);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);overflow:hidden;">
+        <!-- En-tête calendrier -->
+        <div
+          style="background:var(--navy);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-family:var(--font-display);font-size:14px;color:var(--creme);letter-spacing:0.06em;">SEMAINE
+            DU 9 AU 15 MARS 2026</span>
+          <span style="font-size:12px;color:var(--beige);">Nicolas M. · Massage sportif</span>
+        </div>
+
+        <div style="padding:24px;overflow-x:auto;">
+          <table class="calendrier-table">
+            <thead>
+              <tr>
+                <th>HORAIRE</th>
+                <th>LUN 9</th>
+                <th>MAR 10</th>
+                <th>MER 11</th>
+                <th>JEU 12</th>
+                <th>VEN 13</th>
+                <th>SAM 14</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:700;color:var(--grege);font-size:11px;letter-spacing:0.08em;">09H00</td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--grege);font-size:11px;letter-spacing:0.08em;">10H00</td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--grege);font-size:11px;letter-spacing:0.08em;">11H00</td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--grege);font-size:11px;letter-spacing:0.08em;">17H00</td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--grege);font-size:11px;letter-spacing:0.08em;">18H00</td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--grege);font-size:11px;letter-spacing:0.08em;">19H00</td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>
+                  <div class="slot-dispo">Disponible</div>
+                </td>
+                <td>
+                  <div class="slot-pris">Réservé</div>
+                </td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          style="padding:16px 24px;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.05);display:flex;gap:20px;align-items:center;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div
+              style="width:12px;height:12px;background:rgba(196,82,40,0.12);border:1px solid rgba(196,82,40,0.3);border-radius:2px;">
+            </div>
+            <span style="font-size:11px;color:var(--beige);">Disponible</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div
+              style="width:12px;height:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);border-radius:2px;">
+            </div>
+            <span style="font-size:11px;color:var(--grege);">Réservé</span>
+          </div>
+          <span style="font-size:11px;color:var(--grege);margin-left:auto;font-style:italic;">Cliquez sur un créneau
+            pour réserver</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">RÉSERVER MON MASSAGE</a>
+        <div style="margin-top:16px;">
+          <span style="font-size:13px;color:var(--grege);">80€/séance · 1h · Paiement à l'accueil ou par virement</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">BIENETRE</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Prendre soin de vous</span>
+      <h2 class="section-title" style="margin-bottom:16px;">INVESTISSEZ DANS VOTRE RÉCUPÉRATION<br><span style="color:var(--terracotta);">80€ / SÉANCE 1H</span></h2>
+      <p class="cta-subtitle">Un massage, c'est un entraînement supplémentaire. Réservez dès maintenant.</p>
+      <div class="cta-actions">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">RÉSERVER MON MASSAGE · 80€</a>
+        <a href="03-tarifs.html" class="btn btn-outline btn-xl">Voir tous les tarifs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">06 · BIEN-ÊTRE</div>
+</body>
+
+</html>

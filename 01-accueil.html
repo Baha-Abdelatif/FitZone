@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero — béton minéral + verrière industrielle */
+    .hero-home {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.60) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    .hero-deco-line {
+      width: 60px;
+      height: 3px;
+      background: var(--terracotta);
+      margin: 0 auto 32px;
+    }
+
+    .section-header-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header-left {
+      margin-bottom: 64px;
+    }
+
+    /* Espace card icon — industrial symbol */
+    .espace-icon-text {
+      font-family: var(--font-display);
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      color: rgba(240, 232, 220, 0.35);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* Cours card icon remplacement — acier */
+    .cours-symbol {
+      height: 160px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cours-symbol::after {
+      content: attr(data-symbol);
+      position: absolute;
+      font-family: var(--font-display);
+      font-size: 80px;
+      color: rgba(255, 255, 255, 0.08);
+      right: -8px;
+      bottom: -10px;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    /* Map info acier noir */
+    .map-info {
+      background: var(--anthracite) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="⚡ Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html" class="active">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-full hero-home">
+    <div class="hero-content" style="max-width:880px;">
+      <div class="hero-deco-line"></div>
+      <img src="./assets/Logo PNG.png" alt="Fit Zone"
+        style="max-height:88px;width:auto;margin:0 auto 40px;display:block;filter:drop-shadow(0 4px 24px rgba(0,0,0,0.5));">
+      <h1 class="display display-xl" style="color:var(--creme);margin-bottom:12px;line-height:1.02;">
+        VOTRE ZONE.<br>
+        <span style="color:var(--terracotta);">VOTRE PUISSANCE.</span><br>
+        VOTRE FUTUR.
+      </h1>
+      <p style="font-size:18px;color:var(--beige);margin:28px auto 48px;max-width:540px;line-height:1.7;">
+        Complexe sportif premium à Bénesse-Maremne.<br>
+        <span style="color:var(--greige-mineral);font-size:15px;">5 min de Capbreton · 10 min d'Hossegor</span>
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="03-tarifs.html" class="btn btn-primary btn-xl">COMMENCER MAINTENANT</a>
+        <a href="04-cours.html" class="btn btn-outline btn-xl">Voir les cours →</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Découvrir</span>
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- TICKER INDUSTRIEL -->
+  <div class="ticker-band">
+    <div class="ticker-inner">
+      <span class="ticker-item">MUSCULATION</span>
+      <span class="ticker-item">COURS COLLECTIFS</span>
+      <span class="ticker-item">RPM · HIIT · YOGA</span>
+      <span class="ticker-item">KIDZONE GARDERIE</span>
+      <span class="ticker-item">MASSAGE SPORTIF</span>
+      <span class="ticker-item">SURF TRAINING</span>
+      <span class="ticker-item">BÉNESSE-MAREMNE</span>
+      <span class="ticker-item">MUSCULATION</span>
+      <span class="ticker-item">COURS COLLECTIFS</span>
+      <span class="ticker-item">RPM · HIIT · YOGA</span>
+      <span class="ticker-item">KIDZONE GARDERIE</span>
+      <span class="ticker-item">MASSAGE SPORTIF</span>
+      <span class="ticker-item">SURF TRAINING</span>
+      <span class="ticker-item">BÉNESSE-MAREMNE</span>
+    </div>
+  </div>
+
+  <!-- BARRE RÉASSURANCE -->
+  <div class="reassurance-bar">
+    <div class="container">
+      <div class="reassurance-inner">
+        <div class="stat-divider">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Membres actifs</div>
+        </div>
+        <div class="stat-divider">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Cours par semaine</div>
+        </div>
+        <div class="stat-divider">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Années d'expérience</div>
+        </div>
+        <div>
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Membres satisfaits</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOS ESPACES -->
+  <section class="section" style="background:var(--anthracite);padding-top:90px;padding-bottom:0;">
+    <div class="container" style="padding-bottom:64px;">
+      <div class="section-header-centered">
+        <span class="eyebrow">Nos espaces</span>
+        <h2 class="section-title">ENTRE DANS LA ZONE</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Tout ce qu'il te faut pour performer, sous un même toit.</p>
+      </div>
+    </div>
+    <div class="espaces-grid">
+      <div class="espace-card">
+        <!-- Fond béton brique chaud -->
+        <div class="espace-bg" style="background:linear-gradient(160deg,#1c1814,#2e1a0a);"></div>
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 17px,rgba(90,30,10,0.14) 17px,rgba(90,30,10,0.14) 18px),repeating-linear-gradient(90deg,transparent,transparent 37px,rgba(90,30,10,0.09) 37px,rgba(90,30,10,0.09) 38px);"></div>
+        <div class="espace-overlay">
+          <span class="espace-icon-text">ZONE 01</span>
+          <div class="espace-title">MUSCU</div>
+          <div class="espace-desc">Plateau complet · Haltères libres · Racks · Machines guidées</div>
+          <a href="02-le-club.html" class="espace-link">Découvrir l'espace →</a>
+        </div>
+      </div>
+      <div class="espace-card">
+        <!-- Fond acier noir + diagonale métal -->
+        <div class="espace-bg" style="background:linear-gradient(160deg,#1a1614,#3a1808);"></div>
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 9px,rgba(196,82,40,0.055) 9px,rgba(196,82,40,0.055) 10px);"></div>
+        <div class="espace-overlay">
+          <span class="espace-icon-text">ZONE 02</span>
+          <div class="espace-title">COURS COLLECTIFS</div>
+          <div class="espace-desc">4 familles · RPM · Yoga · Zumba · HIIT · Cross-Training</div>
+          <a href="04-cours.html" class="espace-link">Voir le planning →</a>
+        </div>
+      </div>
+      <div class="espace-card">
+        <!-- Fond terracotta profond -->
+        <div class="espace-bg" style="background:linear-gradient(160deg,#3a1808,#5a2412);"></div>
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 17px,rgba(255,255,255,0.03) 17px,rgba(255,255,255,0.03) 18px);"></div>
+        <div class="espace-overlay">
+          <span class="espace-icon-text">ZONE 03</span>
+          <div class="espace-title">KIDZONE</div>
+          <div class="espace-desc">Garderie sécurisée · Encadrement qualifié · Dès 10€/séance</div>
+          <a href="05-kidzone.html" class="espace-link">Découvrir KidZone →</a>
+        </div>
+      </div>
+      <div class="espace-card">
+        <!-- Fond navy profond + grille métal -->
+        <div class="espace-bg" style="background:linear-gradient(160deg,#0e1830,#182848);"></div>
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 13px,rgba(53,117,212,0.055) 13px,rgba(53,117,212,0.055) 14px),repeating-linear-gradient(0deg,transparent,transparent 13px,rgba(53,117,212,0.04) 13px,rgba(53,117,212,0.04) 14px);"></div>
+        <div class="espace-overlay">
+          <span class="espace-icon-text">ZONE 04</span>
+          <div class="espace-title">BIEN-ÊTRE</div>
+          <div class="espace-desc">Massage sportif 1h · Récupération musculaire · 80€/séance</div>
+          <a href="06-bien-etre.html" class="espace-link">Réserver →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURS COLLECTIFS -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;flex-wrap:wrap;gap:20px;">
+        <div>
+          <span class="eyebrow">Cours collectifs</span>
+          <h2 class="section-title">DES COURS POUR<br>CHAQUE OBJECTIF</h2>
+        </div>
+        <a href="04-cours.html" class="btn btn-outline-terra btn-sm">Voir tout le planning →</a>
+      </div>
+      <div class="cours-grid-6">
+        <div class="cours-card">
+          <div class="cours-symbol" style="background:linear-gradient(160deg,#2c1a0a,#c45228);" data-symbol="RPM"></div>
+          <div class="cours-body">
+            <span class="badge badge-cardio">Cardio</span>
+            <div class="cours-name">RPM</div>
+            <div class="cours-meta">45 min · Vélo indoor</div>
+          </div>
+        </div>
+        <div class="cours-card">
+          <div class="cours-symbol" style="background:linear-gradient(160deg,#2e1600,#b85824);" data-symbol="ZBA"></div>
+          <div class="cours-body">
+            <span class="badge badge-cardio">Cardio</span>
+            <div class="cours-name">ZUMBA</div>
+            <div class="cours-meta">60 min · Danse cardio</div>
+          </div>
+        </div>
+        <div class="cours-card">
+          <div class="cours-symbol" style="background:linear-gradient(160deg,#1a1c22,#2a303e);" data-symbol="YGA"></div>
+          <div class="cours-body">
+            <span class="badge badge-souplesse">Souplesse</span>
+            <div class="cours-name">YOGA</div>
+            <div class="cours-meta">60 min · Tous niveaux</div>
+          </div>
+        </div>
+        <div class="cours-card">
+          <div class="cours-symbol" style="background:linear-gradient(160deg,#280c00,#8b3a1c);" data-symbol="BPM"></div>
+          <div class="cours-body">
+            <span class="badge badge-renfo">Renfo.</span>
+            <div class="cours-name">BODY PUMP</div>
+            <div class="cours-meta">45 min · Barres & poids</div>
+          </div>
+        </div>
+        <div class="cours-card">
+          <div class="cours-symbol" style="background:linear-gradient(160deg,#180c00,#5c2000);" data-symbol="XTR"></div>
+          <div class="cours-body">
+            <span class="badge badge-renfo">Renfo.</span>
+            <div class="cours-name">CROSS TRAINING</div>
+            <div class="cours-meta">45 min · Haute intensité</div>
+          </div>
+        </div>
+        <div class="cours-card">
+          <div class="cours-symbol" style="background:linear-gradient(160deg,#081624,#0e2848);" data-symbol="SRF"></div>
+          <div class="cours-body">
+            <span class="badge badge-surf">Surf</span>
+            <div class="cours-name">SURF EXPLO.</div>
+            <div class="cours-meta">30 min · Explosivité</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION MURALE -->
+  <div class="section-mural">
+    <div class="mur-texte-watermark">FOCUS</div>
+    <div class="container">
+      <div class="citation-rule"></div>
+      <p class="citation-murale">DO LESS WITH<br><span class="accent">MORE FOCUS.</span></p>
+      <p style="margin-top:28px;font-size:15px;color:var(--greige-mineral);max-width:480px;line-height:1.7;">L'ambiance, le matériel, les coachs. Tout est conçu pour que tu ailles plus loin, chaque séance.</p>
+    </div>
+  </div>
+
+  <!-- TARIFS APERÇU -->
+  <section class="section" style="background:var(--anthracite-md);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Abonnements</span>
+        <h2 class="section-title">TROUVE TA FORMULE</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Toutes les formules incluent le FULL ACCESS — plateau muscu,
+          cours collectifs, RPM, cross-training, cardio.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-name">AVEC ENGAGEMENT</div>
+          <div class="pricing-price">40€</div>
+          <div class="pricing-period">/mois</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>RPM & Cross-Training</li>
+            <li>Zone cardio incluse</li>
+            <li>Accès illimité</li>
+          </ul>
+          <div class="pricing-note">Frais de dossier uniques : 50€</div>
+          <a href="03-tarifs.html" class="btn btn-outline" style="width:100%;justify-content:center;">JE CHOISIS</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-name">SANS ENGAGEMENT</div>
+          <div class="pricing-price">50€</div>
+          <div class="pricing-period">/mois</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>RPM & Cross-Training</li>
+            <li>Zone cardio incluse</li>
+            <li>Résiliable à tout moment</li>
+          </ul>
+          <div class="pricing-note">Frais de dossier uniques : 50€</div>
+          <a href="03-tarifs.html" class="btn btn-primary" style="width:100%;justify-content:center;">JE CHOISIS</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-name">PASS & UNITÉ</div>
+          <div style="font-family:var(--font-display);font-size:28px;color:var(--beige);margin-bottom:4px;">à partir de
+          </div>
+          <div class="pricing-price">15€</div>
+          <div class="pricing-period">/séance</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>Sans engagement</li>
+            <li>Sans frais de dossier</li>
+            <li>Idéal pour tester</li>
+          </ul>
+          <div class="pricing-note">Pass 1 sem, 1 mois, 3 mois, 6 mois disponibles</div>
+          <a href="03-tarifs.html" class="btn btn-outline" style="width:100%;justify-content:center;">VOIR LES PASS</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:32px;justify-content:center;margin-top:32px;flex-wrap:wrap;">
+        <a href="03-tarifs.html" class="cta-link">Tarifs jeunes & étudiants dès 30€/mois →</a>
+        <a href="03-tarifs.html" class="cta-link">Options garderie et massage →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION SURF -->
+  <section class="surf-section">
+    <div class="surf-content">
+      <span class="badge badge-surf" style="margin-bottom:28px;padding:6px 16px;">Programme spécial surf</span>
+      <h2 class="section-title" style="margin-bottom:24px;">ENTRAÎNE-TOI<br>POUR L'OCÉAN</h2>
+      <p style="font-size:17px;color:var(--beige);line-height:1.8;margin-bottom:48px;">
+        Explosivité pour les manœuvres.<br>
+        Endurance pour le line-up.<br>
+        Programmes conçus par des passionnés de Capbreton.
+      </p>
+      <a href="04-cours.html" class="btn btn-primary btn-xl">DÉCOUVRIR LE PROGRAMME SURF</a>
+    </div>
+  </section>
+
+  <!-- KIDZONE TEASER -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="split">
+        <div class="split-visual"
+          style="background:linear-gradient(160deg,#4d2010,#7a3018);border-radius:var(--radius-lg);border:1px solid rgba(196,82,40,0.2);">
+          <img src="./assets/KidZone PNG.png" alt="KidZone"
+            style="max-width:85%;height:auto;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.5));">
+        </div>
+        <div>
+          <span class="eyebrow">KidZone · Garderie</span>
+          <h2 class="section-title" style="margin-bottom:20px;">VOUS ENTRAÎNEZ,<br>VOS ENFANTS S'AMUSENT</h2>
+          <p style="color:var(--beige);font-size:16px;line-height:1.8;margin-bottom:28px;">
+            La garderie intégrée Fit Zone accueille vos enfants dans un espace sécurisé et ludique pendant que vous vous
+            entraînez.
+          </p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:36px;">
+            <li style="display:flex;align-items:center;gap:12px;color:var(--beige);font-size:15px;">
+              <span style="color:var(--terracotta);font-size:14px;font-weight:800;font-family:var(--font-display);">✓</span> Encadrement qualifié
+            </li>
+            <li style="display:flex;align-items:center;gap:12px;color:var(--beige);font-size:15px;">
+              <span style="color:var(--terracotta);font-size:14px;font-weight:800;font-family:var(--font-display);">✓</span> Espace sécurisé & ludique
+            </li>
+            <li style="display:flex;align-items:center;gap:12px;color:var(--beige);font-size:15px;">
+              <span style="color:var(--terracotta);font-size:14px;font-weight:800;font-family:var(--font-display);">✓</span> Dès 10€ / séance
+            </li>
+            <li style="display:flex;align-items:center;gap:12px;color:var(--beige);font-size:15px;">
+              <span style="color:var(--terracotta);font-size:14px;font-weight:800;font-family:var(--font-display);">✓</span> Inclus dans l'abonnement Standard + Garderie
+            </li>
+          </ul>
+          <a href="05-kidzone.html" class="btn btn-primary">EN SAVOIR PLUS →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TÉMOIGNAGES -->
+  <section class="section" style="background:var(--anthracite-md);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Témoignages</span>
+        <h2 class="section-title">ILS ONT REJOINT LA ZONE</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">« La salle idéale entre deux sessions de surf. Les programmes spécialisés ont
+            vraiment amélioré mon explosivité sur les vagues. Ambiance au top, équipements pro. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🏄</div>
+            <div>
+              <div class="testimonial-name">Mathieu R.</div>
+              <div class="testimonial-profile">Surfeur · Capbreton</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">« Enfin une salle avec une vraie garderie ! Je peux m'entraîner l'esprit
+            tranquille pendant que mes enfants s'amusent. Le personnel est adorable avec les petits. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍👧</div>
+            <div>
+              <div class="testimonial-name">Sophie M.</div>
+              <div class="testimonial-profile">Parent · Bénesse-Maremne</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">« Le tarif étudiant est vraiment accessible. L'ambiance de la salle est premium
+            mais sans prise de tête. Je recommande à tous mes potes d'Hossegor. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🎓</div>
+            <div>
+              <div class="testimonial-name">Lucas T.</div>
+              <div class="testimonial-profile">Étudiant · Hossegor</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALISATION -->
+  <div class="map-section">
+    <div class="map-placeholder">
+      <span style="font-family:var(--font-display);font-size:40px;letter-spacing:0.1em;color:rgba(255,255,255,0.15);position:relative;z-index:1;">CARTE</span>
+      <div
+        style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);background:rgba(14,32,64,0.92);backdrop-filter:blur(8px);padding:12px 24px;border-radius:var(--radius);border:1px solid rgba(53,117,212,0.2);text-align:center;white-space:nowrap;">
+        <span style="font-size:13px;color:var(--creme);font-weight:600;letter-spacing:0.04em;">Bénesse-Maremne, 40230</span><br>
+        <span style="font-size:11px;color:var(--beige);">Vue Google Maps interactive</span>
+      </div>
+    </div>
+    <div class="map-info">
+      <span class="eyebrow" style="color:var(--terracotta);font-size:11px;">Nous trouver</span>
+      <h2 class="section-title" style="margin-bottom:0;">VENIR NOUS VOIR</h2>
+      <div class="map-info-item">
+        <span class="map-info-icon">📍</span>
+        <div class="map-info-text">
+          <h4>Adresse</h4>
+          <p>254 Chemin du Bayonnais<br>40230 Bénesse-Maremne</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon">🚗</span>
+        <div class="map-info-text">
+          <h4>Accès</h4>
+          <p>Parking gratuit · 5 min de Capbreton<br>10 min d'Hossegor · 20 min de Bayonne</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon">🕐</span>
+        <div class="map-info-text">
+          <h4>Horaires</h4>
+          <p>Lun–Ven : 6h00 – 22h00<br>Sam–Dim : 8h00 – 20h00</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon">📞</span>
+        <div class="map-info-text">
+          <h4>Contact</h4>
+          <p>contact@fitzone-benesse.fr<br>05 XX XX XX XX</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">ZONE</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Rejoindre la zone</span>
+      <h2 class="section-title" style="margin-bottom:16px;">PRÊT À ENTRER<br><span style="color:var(--terracotta);">DANS LA ZONE ?</span></h2>
+      <p class="cta-subtitle">Plus de 500 membres t'attendent. Commence aujourd'hui.</p>
+      <div class="cta-actions">
+        <a href="03-tarifs.html" class="btn btn-primary btn-xl">JE PRENDS MON ABONNEMENT</a>
+        <a href="09-contact.html" class="btn btn-outline btn-xl">Prendre contact</a>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="03-tarifs.html" class="cta-link">Ou tester avec une séance découverte à 15€ →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">01 · ACCUEIL</div>
+</body>
+
+</html>

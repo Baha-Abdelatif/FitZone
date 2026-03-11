@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Abonnements & Tarifs</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-tarifs {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    .section-header-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .services-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--anthracite-md);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html" class="active">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-50 hero-tarifs texture-metal">
+    <div class="hero-content">
+      <span class="eyebrow">ABONNEMENTS</span>
+      <h1 class="display display-lg" style="color:var(--creme);margin-bottom:20px;">TROUVE TA FORMULE</h1>
+      <p style="font-size:18px;color:var(--beige);line-height:1.7;max-width:540px;margin:0 auto;">Full Access inclus
+        dans toutes les formules — plateau muscu, cours collectifs, cardio, RPM.</p>
+    </div>
+  </section>
+
+  <!-- ABONNEMENTS MENSUELS -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Mensuel</span>
+        <h2 class="section-title">ABONNEMENTS MENSUELS</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Profitez du Full Access à prix fixe chaque mois</p>
+      </div>
+
+      <!-- Toggle visuel -->
+      <div class="toggle-wrapper">
+        <span class="toggle-label active">Avec engagement</span>
+        <div class="toggle"></div>
+        <span class="toggle-label">Sans engagement</span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- STANDARD -->
+        <div class="pricing-card">
+          <div class="pricing-name">STANDARD</div>
+          <div class="pricing-price">40€</div>
+          <div class="pricing-period">/mois · avec engagement</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>RPM &amp; Cross-Training inclus</li>
+            <li>Zone cardio illimitée</li>
+            <li>Accès illimité aux horaires</li>
+          </ul>
+          <div class="pricing-note">Frais de dossier uniques : 50€</div>
+          <a href="09-contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">JE CHOISIS</a>
+        </div>
+
+        <!-- STANDARD + GARDERIE -->
+        <div class="pricing-card">
+          <div class="pricing-name">STANDARD + GARDERIE</div>
+          <div class="pricing-price">60€</div>
+          <div class="pricing-period">/mois · avec engagement</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>RPM &amp; Cross-Training inclus</li>
+            <li>Zone cardio illimitée</li>
+            <li>KidZone garderie incluse</li>
+          </ul>
+          <div class="pricing-note">Frais de dossier uniques : 50€</div>
+          <a href="09-contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">JE CHOISIS</a>
+        </div>
+
+        <!-- JEUNE / ÉTUDIANT -->
+        <div class="pricing-card" style="border-color:rgba(196,82,40,0.3);">
+          <div class="pricing-name">JEUNE / ÉTUDIANT</div>
+          <div class="pricing-price">30€</div>
+          <div class="pricing-period">/mois · avec engagement</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>RPM &amp; Cross-Training inclus</li>
+            <li>Zone cardio illimitée</li>
+            <li>Sur présentation justificatif</li>
+          </ul>
+          <div class="pricing-note">Frais de dossier uniques : 50€</div>
+          <a href="09-contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">JE CHOISIS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION MURALE -->
+  <div class="section-mural">
+    <div class="mur-texte-watermark">TARIFS</div>
+    <div class="container">
+      <div class="citation-rule"></div>
+      <p class="citation-murale">VOTRE BUDGET,<br><span class="accent">VOTRE CHOIX.</span></p>
+    </div>
+  </div>
+
+  <!-- PASS PONCTUELS -->
+  <section class="section" style="background:var(--anthracite-md);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Sans engagement</span>
+        <h2 class="section-title">PASS TEMPORAIRES</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Flexibilité maximale · Accès complet sans engagement</p>
+      </div>
+      <div class="pass-grid">
+        <div class="pass-card">
+          <div class="pass-name">6 MOIS</div>
+          <div class="pass-price">350€</div>
+          <div class="pass-unit">accès illimité 6 mois</div>
+          <a href="09-contact.html" class="btn btn-outline btn-sm"
+            style="width:100%;justify-content:center;">CHOISIR</a>
+        </div>
+        <div class="pass-card">
+          <div class="pass-name">3 MOIS</div>
+          <div class="pass-price">210€</div>
+          <div class="pass-unit">accès illimité 3 mois</div>
+          <a href="09-contact.html" class="btn btn-outline btn-sm"
+            style="width:100%;justify-content:center;">CHOISIR</a>
+        </div>
+        <div class="pass-card">
+          <div class="pass-name">1 MOIS</div>
+          <div class="pass-price">80€</div>
+          <div class="pass-unit">accès illimité 1 mois</div>
+          <a href="09-contact.html" class="btn btn-outline btn-sm"
+            style="width:100%;justify-content:center;">CHOISIR</a>
+        </div>
+        <div class="pass-card">
+          <div class="pass-name">1 SEMAINE</div>
+          <div class="pass-price">50€</div>
+          <div class="pass-unit">accès illimité 7 jours</div>
+          <a href="09-contact.html" class="btn btn-outline btn-sm"
+            style="width:100%;justify-content:center;">CHOISIR</a>
+        </div>
+        <div class="pass-card" style="border-color:var(--terracotta);">
+          <div class="pass-name">SÉANCE UNITÉ</div>
+          <div class="pass-price">15€</div>
+          <div class="pass-unit">accès 1 journée complète</div>
+          <a href="09-contact.html" class="btn btn-primary btn-sm"
+            style="width:100%;justify-content:center;">COMMENCER</a>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--grege);font-size:14px;margin-top:32px;font-style:italic;">
+        Idéal pour commencer sans engagement · Aucun frais de dossier sur les pass
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES À L'UNITÉ -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Options</span>
+        <h2 class="section-title">SERVICES À L'UNITÉ</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Services complémentaires disponibles à la carte</p>
+      </div>
+      <div class="services-2col">
+        <div class="service-card">
+          <div style="font-family:var(--font-display);font-size:28px;color:var(--terracotta);margin-bottom:16px;letter-spacing:0.1em;">KID</div>
+          <div
+            style="font-family:var(--font-display);font-size:18px;color:var(--creme);margin-bottom:12px;letter-spacing:0.06em;">
+            GARDERIE KIDZONE</div>
+          <div
+            style="font-family:var(--font-display);font-size:36px;color:var(--terracotta);line-height:1;margin-bottom:8px;">
+            10€</div>
+          <div style="font-size:13px;color:var(--grege);margin-bottom:20px;">/séance · ou +20€/mois sur abonnement</div>
+          <p style="font-size:14px;color:var(--beige);line-height:1.7;margin-bottom:20px;">Encadrement qualifié, espace
+            sécurisé et ludique. Disponible pendant votre séance d'entraînement.</p>
+          <a href="05-kidzone.html" class="btn btn-outline-terra btn-sm">En savoir plus →</a>
+        </div>
+        <div class="service-card">
+          <div style="font-family:var(--font-display);font-size:28px;color:var(--terracotta);margin-bottom:16px;letter-spacing:0.1em;">SPA</div>
+          <div
+            style="font-family:var(--font-display);font-size:18px;color:var(--creme);margin-bottom:12px;letter-spacing:0.06em;">
+            MASSAGE SPORTIF</div>
+          <div
+            style="font-family:var(--font-display);font-size:36px;color:var(--terracotta);line-height:1;margin-bottom:8px;">
+            80€</div>
+          <div style="font-size:13px;color:var(--grege);margin-bottom:20px;">/séance · 1 heure complète</div>
+          <p style="font-size:14px;color:var(--beige);line-height:1.7;margin-bottom:20px;">Massage sportif professionnel
+            par un praticien diplômé. Récupération musculaire, prévention des blessures, détente profonde.</p>
+          <a href="06-bien-etre.html" class="btn btn-outline-terra btn-sm">Réserver →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container" style="max-width:800px;">
+      <div class="section-header-centered">
+        <span class="eyebrow">Aide</span>
+        <h2 class="section-title">VOS QUESTIONS</h2>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Comment résilier mon abonnement ?
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          La résiliation d'un abonnement avec engagement est possible après la période minimale d'engagement, avec un
+          préavis d'un mois. L'abonnement sans engagement est résiliable à tout moment, sans préavis. Un formulaire de
+          résiliation est disponible à l'accueil ou par email.
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Les frais de dossier sont-ils remboursables ?
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          Les frais de dossier de 50€ sont uniques et non remboursables. Ils couvrent la création de votre dossier
+          membre, la carte d'accès, et les frais administratifs. Ils ne sont payés qu'une seule fois, même en cas de
+          changement de formule.
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          La garderie est-elle incluse dans mon abonnement ?
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          La garderie KidZone est incluse dans la formule "Standard + Garderie" à 60€/mois. Pour les autres abonnements,
+          elle est disponible à 10€/séance ou en option mensuelle à +20€/mois. La garderie est disponible sur les mêmes
+          plages horaires que la salle.
+        </div>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-header">
+          Puis-je essayer la salle avant de m'abonner ?
+          <span class="accordion-arrow">▼</span>
+        </div>
+        <div class="accordion-body">
+          Oui ! Notre séance découverte à 15€ vous donne accès à l'ensemble de la salle pour une journée complète. Aucun
+          frais de dossier, aucun engagement. C'est le meilleur moyen de découvrir l'ambiance Fit Zone avant de choisir
+          votre formule.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">TARIFS</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Démarrer maintenant</span>
+      <h2 class="section-title" style="margin-bottom:16px;">ENTRER DANS LA ZONE<br><span style="color:var(--terracotta);">SÉANCE DÉCOUVERTE 15€</span></h2>
+      <p class="cta-subtitle">Sans engagement · Sans frais de dossier</p>
+      <div class="cta-actions">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">RÉSERVER MA SÉANCE DÉCOUVERTE</a>
+        <a href="09-contact.html" class="btn btn-outline btn-xl">PRENDRE UN ABONNEMENT</a>
+      </div>
+      <div style="margin-top:20px;">
+        <a href="02-le-club.html" class="cta-link">Découvrir le club avant de décider →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">03 · TARIFS</div>
+</body>
+
+</html>

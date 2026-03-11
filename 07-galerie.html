@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Galerie / L'espace</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-galerie {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    .gallery-filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+      justify-content: center;
+    }
+
+    .video-player {
+      background: var(--anthracite-md);
+      border-radius: var(--radius-lg);
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .video-player::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(45deg, transparent, transparent 6px,
+          rgba(255, 255, 255, 0.01) 6px, rgba(255, 255, 255, 0.01) 7px);
+    }
+
+    .video-play-btn {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 0 0 16px rgba(196, 82, 40, 0.12), 0 0 0 32px rgba(196, 82, 40, 0.06);
+    }
+
+    .video-play-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 20px rgba(196, 82, 40, 0.16), 0 0 0 40px rgba(196, 82, 40, 0.07);
+    }
+
+    .video-info {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .video-info h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .video-info p {
+      font-size: 13px;
+      color: var(--beige);
+    }
+
+    .section-header-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    /* Gallery items — replace emoji with CSS text labels */
+    .gallery-inner-label {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO 40vh -->
+  <section class="hero hero-40 hero-galerie">
+    <div class="hero-content">
+      <span class="eyebrow">GALERIE</span>
+      <h1 class="display display-lg" style="color:var(--creme); margin-bottom:16px;">L'ESPACE FIT ZONE</h1>
+      <p style="font-size:18px; color:var(--beige); max-width:560px; margin:0 auto;">Plongez dans l'ambiance
+        industrielle premium</p>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+
+      <!-- Filtres -->
+      <div class="gallery-filters">
+        <button class="filter-btn active">TOUT</button>
+        <button class="filter-btn">MUSCU</button>
+        <button class="filter-btn">COURS</button>
+        <button class="filter-btn">CARDIO</button>
+        <button class="filter-btn">KIDZONE</button>
+        <button class="filter-btn">BIEN-ÊTRE</button>
+        <button class="filter-btn">AMBIANCE</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+
+        <!-- Item 1: PLATEAU MUSCU — wide -->
+        <div class="gallery-item wide">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, var(--anthracite-md) 0%, #282018 100%);">
+            <span class="gallery-inner-label">MSC</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">PLATEAU MUSCU</span>
+          </div>
+        </div>
+
+        <!-- Item 2: COURS COLLECTIFS — tall -->
+        <div class="gallery-item tall">
+          <div class="gallery-inner" style="background: linear-gradient(160deg, var(--anthracite-md) 0%, #1e1410 100%);">
+            <span class="gallery-inner-label">CRS</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">COURS COLLECTIFS</span>
+          </div>
+        </div>
+
+        <!-- Item 3: CARDIO ZONE -->
+        <div class="gallery-item">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, #1e1800 0%, var(--terra-dark) 100%);">
+            <span class="gallery-inner-label">RPM</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">CARDIO ZONE</span>
+          </div>
+        </div>
+
+        <!-- Item 4: ENTRÉE — wide -->
+        <div class="gallery-item wide">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, var(--anthracite) 0%, #1a1814 100%);">
+            <span class="gallery-inner-label">///</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">ENTRÉE</span>
+          </div>
+        </div>
+
+        <!-- Item 5: KIDZONE -->
+        <div class="gallery-item">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, var(--terra-dark) 0%, #3a1808 100%);">
+            <span class="gallery-inner-label">KID</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">KIDZONE</span>
+          </div>
+        </div>
+
+        <!-- Item 6: BIEN-ÊTRE -->
+        <div class="gallery-item">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, var(--navy) 0%, #0a1830 100%);">
+            <span class="gallery-inner-label">SPA</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">BIEN-ÊTRE</span>
+          </div>
+        </div>
+
+        <!-- Item 7: VESTIAIRES -->
+        <div class="gallery-item">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, var(--anthracite) 0%, #1e1c18 100%);">
+            <span class="gallery-inner-label">[ ]</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">VESTIAIRES</span>
+          </div>
+        </div>
+
+        <!-- Item 8: BAR ACCUEIL -->
+        <div class="gallery-item">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, #1e1810 0%, var(--anthracite-md) 100%);">
+            <span class="gallery-inner-label">BAR</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">BAR ACCUEIL</span>
+          </div>
+        </div>
+
+        <!-- Item 9: AMBIANCE -->
+        <div class="gallery-item">
+          <div class="gallery-inner" style="background: linear-gradient(135deg, var(--beton) 0%, #161210 100%);">
+            <span class="gallery-inner-label">ATM</span>
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-label">AMBIANCE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION MURALE -->
+  <div class="section-mural">
+    <div class="mur-texte-watermark">GALERIE</div>
+    <div class="container">
+      <div class="citation-rule"></div>
+      <p class="citation-murale">UN ESPACE PENSÉ<br><span class="accent">POUR PERFORMER.</span></p>
+    </div>
+  </div>
+
+  <!-- VIDÉO D'AMBIANCE -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">VIDÉO D'AMBIANCE</span>
+        <h2 class="section-title" style="text-align:center;">RESSENTEZ L'ÉNERGIE</h2>
+      </div>
+      <div class="video-player">
+        <div class="video-play-btn">▶</div>
+        <div class="video-info">
+          <h3>L'AMBIANCE EN VIDÉO</h3>
+          <p>30 secondes pour tout comprendre</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">GALERIE</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow">PRÊT ?</span>
+      <h2 class="display display-md" style="color:var(--creme); margin-bottom:20px;">VENEZ VIVRE L'EXPÉRIENCE<br><span style="color:var(--terracotta);">SÉANCE DÉCOUVERTE 15€</span></h2>
+      <p class="cta-subtitle">Un espace pensé pour performer. Venez le voir par vous-même.</p>
+      <div class="cta-actions">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">NOUS CONTACTER</a>
+        <a href="03-tarifs.html" class="btn btn-outline btn-xl">VOIR LES TARIFS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">07 · GALERIE</div>
+
+</body>
+
+</html>

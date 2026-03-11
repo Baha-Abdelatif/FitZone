@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Mentions Légales / CGV / Confidentialité</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-legal {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    /* Tabs navigation */
+    .tabs-nav {
+      background: var(--anthracite-md);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 0;
+      position: sticky;
+      top: 72px;
+      z-index: 100;
+    }
+
+    .tabs-nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 48px;
+      display: flex;
+      gap: 0;
+    }
+
+    .tab-btn {
+      padding: 18px 28px;
+      font-family: var(--font-display);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--grege);
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      transition: color var(--transition), border-color var(--transition);
+      text-transform: uppercase;
+    }
+
+    .tab-btn:hover {
+      color: var(--creme);
+    }
+
+    .tab-btn.active {
+      color: var(--creme);
+      border-bottom-color: var(--terracotta);
+    }
+
+    /* Tab content */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Legal content typography — sur fond sombre */
+    .legal-content {
+      padding: var(--section-py) 0;
+    }
+
+    .legal-content.bg-dark-a {
+      background: var(--anthracite);
+    }
+
+    .legal-content.bg-dark-b {
+      background: var(--beton);
+    }
+
+    .legal-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .legal-body h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--creme);
+      letter-spacing: 0.05em;
+      margin-top: 48px;
+      margin-bottom: 14px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .legal-body h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .legal-body p {
+      font-size: 14px;
+      color: var(--beige);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .legal-body ul {
+      margin: 12px 0 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .legal-body ul li {
+      font-size: 14px;
+      color: var(--beige);
+      line-height: 1.65;
+    }
+
+    .legal-body strong {
+      color: var(--creme);
+      font-weight: 700;
+    }
+
+    .legal-body a {
+      color: var(--terracotta);
+      text-decoration: underline;
+    }
+
+    .legal-meta {
+      display: inline-block;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: var(--radius);
+      border-left: 3px solid var(--terracotta);
+      margin-bottom: 32px;
+    }
+
+    .legal-meta p {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO 30vh -->
+  <section class="hero hero-30 hero-legal">
+    <div class="hero-content">
+      <h1 class="display display-lg" style="color:var(--creme); margin-bottom:14px;">INFORMATIONS LÉGALES</h1>
+      <p style="font-size:16px; color:var(--beige);">Mentions légales, politique de confidentialité et conditions
+        générales de vente</p>
+    </div>
+  </section>
+
+  <!-- TABS NAVIGATION -->
+  <div class="tabs-nav">
+    <div class="tabs-nav-inner">
+      <button class="tab-btn active" onclick="showTab('mentions')">MENTIONS LÉGALES</button>
+      <button class="tab-btn" onclick="showTab('confidentialite')">CONFIDENTIALITÉ</button>
+      <button class="tab-btn" onclick="showTab('cgv')">CGV</button>
+    </div>
+  </div>
+
+  <!-- TAB 1 : MENTIONS LÉGALES -->
+  <div id="tab-mentions" class="tab-content active">
+    <div class="legal-content bg-dark-a">
+      <div class="legal-body">
+
+        <h2>Éditeur du site</h2>
+        <div class="legal-meta">
+          <p><strong>Société :</strong> NOVASIDE</p>
+          <p><strong>SIRET :</strong> XXXXXXXXXXXXX</p>
+          <p><strong>Adresse :</strong> 254 Chemin du Bayonnais, 40230 Bénesse-Maremne</p>
+          <p><strong>Email :</strong> contact@fitzone.fr</p>
+          <p><strong>Téléphone :</strong> +33 5 58 XX XX XX</p>
+        </div>
+        <p>Le site fitzone.fr est édité par la société NOVASIDE, enregistrée au Registre du Commerce et des Sociétés. Le
+          directeur de la publication est le représentant légal de la société NOVASIDE.</p>
+
+        <h2>Hébergeur</h2>
+        <p>
+          <strong>Wix.com Ltd.</strong><br>
+          500 Terry A François Blvd<br>
+          San Francisco, CA 94158<br>
+          États-Unis d'Amérique
+        </p>
+        <p>Site web : <a href="https://www.wix.com" target="_blank" rel="noopener">www.wix.com</a></p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>L'ensemble des contenus présents sur le site fitzone.fr (textes, images, graphismes, logos, icônes, sons,
+          logiciels...) sont la propriété exclusive de NOVASIDE ou de ses partenaires. Toute reproduction,
+          représentation, modification, publication ou adaptation de tout ou partie des éléments du site, quel que soit
+          le moyen ou le procédé utilisé, est interdite sauf autorisation écrite préalable de NOVASIDE.</p>
+        <p>Toute exploitation non autorisée du site ou de l'un quelconque des éléments qu'il contient sera considérée
+          comme constitutive d'une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et
+          suivants du Code de Propriété Intellectuelle.</p>
+
+        <h2>Cookies</h2>
+        <p>Le site fitzone.fr utilise des cookies à des fins de mesure d'audience et d'amélioration de l'expérience
+          utilisateur. Les cookies sont de petits fichiers texte stockés sur votre terminal lors de la visite du site.
+          Vous pouvez vous opposer à leur utilisation en configurant votre navigateur.</p>
+        <p>Conformément à la réglementation en vigueur, votre consentement est recueilli avant tout dépôt de cookie non
+          essentiel. Vous pouvez retirer votre consentement à tout moment.</p>
+
+        <h2>Données personnelles</h2>
+        <p>La collecte et le traitement de vos données personnelles sont régis par notre <strong>Politique de
+            Confidentialité</strong>, accessible via l'onglet "Confidentialité" ci-dessus. Conformément au Règlement
+          Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, d'effacement
+          et de portabilité de vos données.</p>
+        <p>Pour exercer ces droits ou pour toute question relative à la protection de vos données, contactez-nous à : <a
+            href="mailto:contact@fitzone.fr">contact@fitzone.fr</a></p>
+
+        <h2>Limitation de responsabilité</h2>
+        <p>NOVASIDE s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur le site.
+          Toutefois, NOVASIDE ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à
+          disposition sur ce site et décline toute responsabilité pour les erreurs ou omissions.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2 : CONFIDENTIALITÉ -->
+  <div id="tab-confidentialite" class="tab-content">
+    <div class="legal-content bg-dark-b">
+      <div class="legal-body">
+
+        <h2>Collecte des données</h2>
+        <p>Dans le cadre de votre utilisation du site fitzone.fr et de nos services, nous collectons les données
+          personnelles suivantes :</p>
+        <ul>
+          <li>Données d'identification : nom, prénom, adresse email, numéro de téléphone</li>
+          <li>Données de connexion : adresse IP, logs de navigation, données de cookies</li>
+          <li>Données liées à l'abonnement : historique des paiements, cours réservés, présences</li>
+          <li>Données communiquées via le formulaire de contact</li>
+        </ul>
+        <p>Ces données sont collectées directement auprès de vous lors de votre inscription, de la création de votre
+          compte membre, ou lors de l'utilisation de nos formulaires en ligne.</p>
+
+        <h2>Utilisation des données</h2>
+        <p>Vos données personnelles sont utilisées pour les finalités suivantes :</p>
+        <ul>
+          <li>Gestion de votre abonnement et de votre compte membre</li>
+          <li>Traitement de vos réservations de cours</li>
+          <li>Envoi de communications relatives à vos séances et à votre compte</li>
+          <li>Envoi de notre newsletter (avec votre consentement)</li>
+          <li>Amélioration de nos services et personnalisation de l'expérience</li>
+          <li>Facturation et comptabilité</li>
+          <li>Réponse à vos demandes d'information</li>
+        </ul>
+        <p>Nous ne vendons, ne louons ni ne partageons vos données personnelles à des tiers à des fins commerciales.</p>
+
+        <h2>Droits RGPD</h2>
+        <p>Conformément au Règlement (UE) 2016/679 (RGPD) et à la loi Informatique et Libertés, vous bénéficiez des
+          droits suivants concernant vos données personnelles :</p>
+        <ul>
+          <li><strong>Droit d'accès</strong> : vous pouvez demander une copie des données que nous détenons sur vous
+          </li>
+          <li><strong>Droit de rectification</strong> : vous pouvez demander la correction de données inexactes</li>
+          <li><strong>Droit à l'effacement</strong> : vous pouvez demander la suppression de vos données dans certaines
+            conditions</li>
+          <li><strong>Droit à la portabilité</strong> : vous pouvez recevoir vos données dans un format structuré et
+            lisible</li>
+          <li><strong>Droit d'opposition</strong> : vous pouvez vous opposer au traitement de vos données pour des
+            motifs légitimes</li>
+          <li><strong>Droit à la limitation</strong> : vous pouvez demander la suspension temporaire du traitement</li>
+        </ul>
+        <p>Pour exercer vos droits, adressez votre demande par email à <a
+            href="mailto:contact@fitzone.fr">contact@fitzone.fr</a> ou par courrier à l'adresse de NOVASIDE. Nous nous
+          engageons à répondre dans un délai d'un mois.</p>
+        <p>Si vous estimez que le traitement de vos données ne respecte pas la réglementation, vous avez le droit
+          d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) — <a
+            href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+        <h2>Conservation des données</h2>
+        <p>Vos données sont conservées pour la durée nécessaire à la réalisation des finalités pour lesquelles elles ont
+          été collectées. Les données liées à un abonnement actif sont conservées pendant toute la durée de la relation
+          contractuelle, puis archivées pendant 5 ans à des fins légales.</p>
+
+        <h2>Sécurité</h2>
+        <p>NOVASIDE met en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données
+          contre tout accès non autorisé, modification, divulgation ou destruction.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3 : CGV -->
+  <div id="tab-cgv" class="tab-content">
+    <div class="legal-content bg-dark-a">
+      <div class="legal-body">
+
+        <h2>Objet</h2>
+        <p>Les présentes Conditions Générales de Vente (CGV) régissent les relations contractuelles entre la société
+          NOVASIDE (exploitant Fit Zone) et toute personne physique souhaitant souscrire à un abonnement ou acheter un
+          service proposé par Fit Zone. Tout achat implique l'acceptation sans réserve des présentes conditions.</p>
+
+        <h2>Abonnements et tarifs</h2>
+        <p>Fit Zone propose différentes formules d'abonnement dont les tarifs sont consultables sur la page <a
+            href="03-tarifs.html">Tarifs</a> du présent site. Les prix sont indiqués en euros TTC.</p>
+        <ul>
+          <li><strong>Abonnement Sans Engagement</strong> : mensuel, renouvelé automatiquement, résiliable à tout moment
+            avec un préavis de 15 jours</li>
+          <li><strong>Abonnement Annuel</strong> : engagement sur 12 mois, avec un tarif préférentiel. Paiement mensuel
+            ou en une fois</li>
+          <li><strong>Pass 10 séances</strong> : valable 3 mois à compter de la date d'achat, non remboursable</li>
+        </ul>
+        <p>NOVASIDE se réserve le droit de modifier ses tarifs à tout moment. Les modifications tarifaires seront
+          notifiées aux abonnés avec un préavis d'un mois minimum.</p>
+
+        <h2>Modalités de paiement</h2>
+        <p>Le paiement s'effectue par carte bancaire (Visa, Mastercard, American Express) ou par prélèvement SEPA pour
+          les abonnements à renouvellement automatique. Le paiement en espèces est accepté directement à l'accueil de la
+          salle dans la limite légale en vigueur.</p>
+        <p>En cas de défaut de paiement, l'accès à la salle sera suspendu jusqu'à régularisation. NOVASIDE se réserve le
+          droit d'appliquer des pénalités de retard conformément à la réglementation en vigueur.</p>
+
+        <h2>Résiliation</h2>
+        <p>Pour les abonnements sans engagement, la résiliation peut être effectuée à tout moment en adressant une
+          demande par email à <a href="mailto:contact@fitzone.fr">contact@fitzone.fr</a> ou par courrier recommandé avec
+          accusé de réception, avec un préavis minimum de 15 jours avant la prochaine échéance de facturation.</p>
+        <p>Pour les abonnements annuels, la résiliation avant terme est possible dans les cas suivants : déménagement à
+          plus de 30 km, incapacité médicale dûment justifiée, perte d'emploi. Un justificatif sera demandé.</p>
+        <p>NOVASIDE se réserve le droit de résilier un abonnement en cas de non-respect du règlement intérieur de la
+          salle.</p>
+
+        <h2>Règlement intérieur</h2>
+        <p>L'accès à la salle Fit Zone implique le respect du règlement intérieur affiché dans les locaux et disponible
+          à l'accueil. Ce règlement définit notamment les règles d'hygiène, de sécurité et de bonne conduite à adopter
+          au sein de la salle.</p>
+
+        <h2>Responsabilité</h2>
+        <p>La pratique d'activités physiques implique des risques. Fit Zone recommande à tout nouvel adhérent de
+          consulter un médecin avant de débuter un programme d'entraînement intensif. NOVASIDE ne saurait être tenu
+          responsable des accidents survenus en cas de non-respect des consignes de sécurité.</p>
+
+        <h2>Droit applicable et litiges</h2>
+        <p>Les présentes CGV sont régies par le droit français. En cas de litige, une solution amiable sera recherchée
+          en priorité. À défaut d'accord, les tribunaux compétents du ressort de Dax (40) seront saisis.</p>
+        <p>Conformément aux articles L.611-1 et suivants du Code de la Consommation, vous pouvez recourir gratuitement
+          au médiateur de la consommation compétent pour tout litige non résolu.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">11 · MENTIONS LÉGALES</div>
+
+  <script>
+    function showTab(tab) {
+      // Masquer tous les contenus
+      document.querySelectorAll('.tab-content').forEach(function (el) {
+        el.classList.remove('active');
+      });
+      // Désactiver tous les boutons
+      document.querySelectorAll('.tab-btn').forEach(function (el) {
+        el.classList.remove('active');
+      });
+      // Afficher le contenu sélectionné
+      document.getElementById('tab-' + tab).classList.add('active');
+      // Activer le bouton correspondant
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+
+</html>

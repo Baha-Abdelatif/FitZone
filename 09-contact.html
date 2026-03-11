@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Contact & Accès</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-contact {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    /* Form on dark background */
+    .contact-section {
+      background: var(--anthracite);
+      padding: var(--section-py) 0;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-form-card {
+      background: var(--anthracite-md);
+      border-radius: var(--radius-lg);
+      padding: 48px 44px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .contact-form-card .form-group label {
+      color: var(--beige);
+    }
+
+    .contact-form-card .form-control {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.1);
+      color: var(--creme);
+    }
+
+    .contact-form-card .form-control:focus {
+      border-color: var(--terracotta);
+    }
+
+    .contact-form-card .form-control::placeholder {
+      color: rgba(200, 190, 180, 0.3);
+    }
+
+    .contact-form-card select.form-control option {
+      background: var(--anthracite-md);
+      color: var(--creme);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .contact-info-side .contact-info-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .contact-info-side .contact-info-text h4 {
+      color: var(--creme);
+    }
+
+    .contact-info-side .contact-info-text p {
+      color: var(--beige);
+    }
+
+    .contact-info-side .contact-info-icon {
+      color: var(--terracotta);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .access-list {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .access-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--beige);
+    }
+
+    .access-item span:first-child {
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+
+    .map-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 420px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta active">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO 30vh -->
+  <section class="hero hero-30 hero-contact">
+    <div class="hero-content">
+      <span class="eyebrow">CONTACT</span>
+      <h1 class="display display-lg" style="color:var(--creme); margin-bottom:14px;">PARLONS-EN</h1>
+      <p style="font-size:17px; color:var(--beige);">Une question ? Un projet d'abonnement ? On répond vite.</p>
+    </div>
+  </section>
+
+  <!-- SECTION PRINCIPALE CONTACT -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- COLONNE GAUCHE — Formulaire -->
+        <div>
+          <div style="margin-bottom:36px;">
+            <span class="eyebrow" style="color:var(--terracotta);">FORMULAIRE</span>
+            <h2 class="section-title">ENVOYEZ-NOUS UN MESSAGE</h2>
+            <p class="section-subtitle" style="margin-bottom:0;">Nous répondons généralement sous 24h. Pour une
+              réponse immédiate, appelez-nous.</p>
+          </div>
+
+          <div class="contact-form-card">
+            <form onsubmit="return false;">
+
+              <!-- Prénom + Nom -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" id="prenom" class="form-control" placeholder="Votre prénom">
+                </div>
+                <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" class="form-control" placeholder="Votre nom">
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Adresse email</label>
+                <input type="email" id="email" class="form-control" placeholder="votre@email.com">
+              </div>
+
+              <!-- Téléphone -->
+              <div class="form-group">
+                <label for="tel">Téléphone</label>
+                <input type="tel" id="tel" class="form-control" placeholder="+33 6 XX XX XX XX">
+              </div>
+
+              <!-- Objet -->
+              <div class="form-group">
+                <label for="objet">Objet de votre message</label>
+                <select id="objet" class="form-control">
+                  <option value="" disabled selected>Choisissez un objet...</option>
+                  <option value="abonnement">Abonnement</option>
+                  <option value="renseignement">Renseignement général</option>
+                  <option value="kidzone">KidZone</option>
+                  <option value="massage">Massage &amp; Bien-être</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" class="form-control"
+                  placeholder="Décrivez votre demande en quelques mots..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">ENVOYER LE
+                MESSAGE</button>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- COLONNE DROITE — Informations -->
+        <div>
+          <div style="margin-bottom:36px;">
+            <span class="eyebrow" style="color:var(--terracotta);">INFORMATIONS</span>
+            <h2 class="section-title">TROUVEZ-NOUS</h2>
+          </div>
+
+          <div class="contact-info-side">
+
+            <div class="contact-info-item"
+              style="display:flex; gap:16px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span class="contact-info-icon"
+                style="font-size:14px; flex-shrink:0; margin-top:2px; color:var(--terracotta);">◆</span>
+              <div class="contact-info-text">
+                <h4
+                  style="font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--creme); margin-bottom:4px;">
+                  Adresse</h4>
+                <p style="font-size:13px; color:var(--beige); line-height:1.65;">254 Chemin du Bayonnais<br>40230
+                  Bénesse-Maremne</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item"
+              style="display:flex; gap:16px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span class="contact-info-icon"
+                style="font-size:14px; flex-shrink:0; margin-top:2px; color:var(--terracotta);">◆</span>
+              <div class="contact-info-text">
+                <h4
+                  style="font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--creme); margin-bottom:4px;">
+                  Téléphone</h4>
+                <p style="font-size:13px; color:var(--beige); line-height:1.65;">+33 5 58 XX XX XX<br>Du lundi au
+                  samedi, 8h–20h</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item"
+              style="display:flex; gap:16px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span class="contact-info-icon"
+                style="font-size:14px; flex-shrink:0; margin-top:2px; color:var(--terracotta);">◆</span>
+              <div class="contact-info-text">
+                <h4
+                  style="font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--creme); margin-bottom:4px;">
+                  Email</h4>
+                <p style="font-size:13px; color:var(--beige); line-height:1.65;">contact@fitzone.fr<br>Réponse sous
+                  24h</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item"
+              style="display:flex; gap:16px; padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.07);">
+              <span class="contact-info-icon"
+                style="font-size:14px; flex-shrink:0; margin-top:2px; color:var(--terracotta);">◆</span>
+              <div class="contact-info-text">
+                <h4
+                  style="font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--creme); margin-bottom:4px;">
+                  Horaires d'ouverture</h4>
+                <p style="font-size:13px; color:var(--beige); line-height:1.65;">
+                  Lun–Ven : 6h30 – 22h00<br>
+                  Samedi : 8h00 – 20h00<br>
+                  Dimanche : 9h00 – 17h00
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item" style="display:flex; gap:16px; padding:20px 0;">
+              <span class="contact-info-icon"
+                style="font-size:14px; flex-shrink:0; margin-top:2px; color:var(--terracotta);">◆</span>
+              <div class="contact-info-text">
+                <h4
+                  style="font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--creme); margin-bottom:4px;">
+                  Réseaux sociaux</h4>
+                <p style="font-size:13px; color:var(--beige); line-height:1.65;">
+                  Instagram : @fitzone_benesse<br>
+                  Facebook : Fit Zone Bénesse-Maremne
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Accès -->
+          <div class="access-list">
+            <p
+              style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--grege); margin-bottom:8px;">
+              ACCÈS &amp; DISTANCES</p>
+            <div class="access-item">
+              <span>→</span>
+              <span>5 min de Capbreton</span>
+            </div>
+            <div class="access-item">
+              <span>→</span>
+              <span>10 min d'Hossegor</span>
+            </div>
+            <div class="access-item">
+              <span>→</span>
+              <span>20 min de Bayonne</span>
+            </div>
+            <div class="access-item">
+              <span>·</span>
+              <span>Parking gratuit sur place</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP SECTION -->
+  <div class="map-section">
+    <div class="map-placeholder" style="display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:18px;letter-spacing:0.12em;color:rgba(255,255,255,0.3);background:var(--beton);">
+      CARTE
+    </div>
+    <div class="map-info">
+      <div class="map-info-item">
+        <span class="map-info-icon" style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.06em;color:var(--terracotta);">ADR</span>
+        <div class="map-info-text">
+          <h4>ADRESSE</h4>
+          <p>254 Chemin du Bayonnais<br>40230 Bénesse-Maremne, France</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon" style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.06em;color:var(--terracotta);">→</span>
+        <div class="map-info-text">
+          <h4>DEPUIS CAPBRETON</h4>
+          <p>5 minutes en voiture via la D652</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon" style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.06em;color:var(--terracotta);">→</span>
+        <div class="map-info-text">
+          <h4>DEPUIS HOSSEGOR</h4>
+          <p>10 minutes en voiture</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon" style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.06em;color:var(--terracotta);">→</span>
+        <div class="map-info-text">
+          <h4>DEPUIS BAYONNE</h4>
+          <p>20 minutes par l'autoroute A63</p>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <span class="map-info-icon" style="font-family:var(--font-display);font-size:13px;font-weight:700;letter-spacing:0.06em;color:var(--terracotta);">PKG</span>
+        <div class="map-info-text">
+          <h4>STATIONNEMENT</h4>
+          <p>Parking gratuit et spacieux devant la salle</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">09 · CONTACT</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — 5 exercices pour préparer ton corps au surf</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ============================================================
+       ARTICLE — HERO
+       ============================================================ */
+    .article-hero {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.96) 0%, rgba(14, 32, 64, 0.62) 52%, rgba(22, 22, 20, 0.94) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.028) 59px, rgba(255, 255, 255, 0.028) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.028) 59px, rgba(255, 255, 255, 0.028) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1828 42%, #161614 100%);
+      padding: 80px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ============================================================
+       BREADCRUMB
+       ============================================================ */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--greige-mineral);
+      margin-bottom: 32px;
+    }
+
+    .breadcrumb a {
+      color: var(--greige-mineral);
+      transition: color var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--creme);
+    }
+
+    .breadcrumb-sep {
+      color: var(--gris-metal);
+      font-size: 9px;
+    }
+
+    .breadcrumb-current {
+      color: var(--terracotta);
+    }
+
+    /* ============================================================
+       ARTICLE META — Auteur, date, temps de lecture
+       ============================================================ */
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+
+    .article-meta-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, #c45228, #8b3a1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 14px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+      border: 2px solid rgba(196, 82, 40, 0.3);
+    }
+
+    .meta-author-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--creme);
+    }
+
+    .meta-author-role {
+      font-size: 11px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.06em;
+    }
+
+    .meta-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--gris-metal);
+    }
+
+    .meta-item {
+      font-size: 11px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .meta-item span {
+      color: var(--beige);
+    }
+
+    /* ============================================================
+       ARTICLE IMAGE HERO — Visuel principal pleine largeur
+       ============================================================ */
+    .article-visual {
+      width: 100%;
+      height: 480px;
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.4) 0%, rgba(14, 32, 64, 0.55) 50%, rgba(22, 22, 20, 0.6) 100%),
+        linear-gradient(170deg, #0e1828 0%, #1a3060 50%, #0a1a30 100%);
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 52px 0 0;
+    }
+
+    .article-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(53, 117, 212, 0.04) 59px, rgba(53, 117, 212, 0.04) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(53, 117, 212, 0.04) 59px, rgba(53, 117, 212, 0.04) 61px);
+    }
+
+    .article-visual-label {
+      position: absolute;
+      bottom: 20px;
+      left: 24px;
+      font-size: 11px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .article-visual-text {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 8vw, 100px);
+      color: rgba(255, 255, 255, 0.06);
+      letter-spacing: -0.02em;
+      user-select: none;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       ARTICLE LAYOUT — Colonne centrale + sidebar
+       ============================================================ */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 64px;
+      align-items: start;
+      margin-top: 64px;
+    }
+
+    /* ============================================================
+       ARTICLE BODY — Contenu rédactionnel
+       ============================================================ */
+    .article-body {
+      /* Colonne de lecture */
+    }
+
+    .article-intro {
+      font-size: 18px;
+      color: var(--beige);
+      line-height: 1.85;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--gris-metal);
+      font-weight: 400;
+    }
+
+    .article-h2 {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.5vw, 28px);
+      color: var(--creme);
+      letter-spacing: 0.04em;
+      margin: 44px 0 20px;
+      padding-left: 20px;
+      border-left: 3px solid var(--terracotta);
+    }
+
+    .article-h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin: 32px 0 14px;
+    }
+
+    .article-p {
+      font-size: 15px;
+      color: var(--beige);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    /* Pull-quote industriel */
+    .article-quote {
+      background: var(--anthracite-md);
+      border-left: 4px solid var(--terracotta);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 28px 32px;
+      margin: 36px 0;
+      position: relative;
+    }
+
+    .article-quote::before {
+      content: '"';
+      position: absolute;
+      top: 8px;
+      right: 20px;
+      font-size: 80px;
+      font-family: Georgia, serif;
+      color: rgba(196, 82, 40, 0.12);
+      line-height: 1;
+    }
+
+    .article-quote p {
+      font-size: 17px;
+      color: var(--creme);
+      line-height: 1.7;
+      font-style: italic;
+      margin: 0 0 12px;
+    }
+
+    .article-quote cite {
+      font-size: 11px;
+      color: var(--terracotta);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* Image placeholders inline dans l'article */
+    .article-img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin: 32px 0 12px;
+      position: relative;
+    }
+
+    .article-img-inner {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .article-img-caption {
+      font-size: 11px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 10px 0 24px;
+      display: block;
+    }
+
+    /* Liste exercices — style industriel numéroté */
+    .exercise-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .exercise-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 20px;
+      align-items: start;
+      background: var(--anthracite-md);
+      border: 1px solid var(--gris-metal);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .exercise-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: rgba(196, 82, 40, 0.3);
+      line-height: 1;
+      text-align: center;
+    }
+
+    .exercise-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .exercise-desc {
+      font-size: 14px;
+      color: var(--beige);
+      line-height: 1.7;
+    }
+
+    .exercise-tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      border: 1px solid rgba(196, 82, 40, 0.3);
+      padding: 3px 10px;
+      border-radius: 3px;
+    }
+
+    /* Info box — astuce / conseil */
+    .article-tip {
+      background: rgba(14, 32, 64, 0.5);
+      border: 1px solid rgba(53, 117, 212, 0.2);
+      border-left: 4px solid var(--navy);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .article-tip-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #6ba0e8;
+      margin-bottom: 10px;
+    }
+
+    .article-tip p {
+      font-size: 14px;
+      color: var(--beige);
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Tags article */
+    .article-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 44px 0 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--gris-metal);
+    }
+
+    .article-tag-label {
+      font-size: 11px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      align-self: center;
+      margin-right: 4px;
+    }
+
+    /* Partage article */
+    .article-share {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 24px 0;
+      border-top: 1px solid var(--gris-metal);
+      border-bottom: 1px solid var(--gris-metal);
+      margin-bottom: 48px;
+    }
+
+    .article-share-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--greige-mineral);
+      flex-shrink: 0;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border: 1px solid var(--gris-metal);
+      border-radius: var(--radius);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--greige-mineral);
+      transition: var(--transition);
+      background: transparent;
+    }
+
+    .share-btn:hover {
+      border-color: var(--terracotta);
+      color: var(--creme);
+    }
+
+    /* Bio auteur */
+    .author-bio {
+      background: var(--anthracite-md);
+      border: 1px solid var(--gris-metal);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .author-bio-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, #c45228, #8b3a1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+      border: 2px solid rgba(196, 82, 40, 0.35);
+    }
+
+    .author-bio-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+
+    .author-bio-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .author-bio-spec {
+      font-size: 12px;
+      color: var(--greige-mineral);
+      margin-bottom: 12px;
+    }
+
+    .author-bio-text {
+      font-size: 14px;
+      color: var(--beige);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       SIDEBAR — Collante à droite
+       ============================================================ */
+    .article-sidebar {
+      position: sticky;
+      top: 92px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .sidebar-block {
+      background: var(--anthracite-md);
+      border: 1px solid var(--gris-metal);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+
+    .sidebar-block-title {
+      font-family: var(--font-display);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: var(--creme);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--terracotta);
+    }
+
+    /* Table des matières */
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .toc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 13px;
+      color: var(--greige-mineral);
+      cursor: pointer;
+      transition: color var(--transition);
+    }
+
+    .toc-item:last-child {
+      border-bottom: none;
+    }
+
+    .toc-item:hover {
+      color: var(--creme);
+    }
+
+    .toc-num {
+      font-family: var(--font-display);
+      font-size: 11px;
+      color: var(--terracotta);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Articles récents sidebar */
+    .sidebar-article {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+    }
+
+    .sidebar-article:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .sidebar-article-img {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar-article-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--beige);
+      line-height: 1.4;
+      margin-bottom: 6px;
+      transition: color var(--transition);
+    }
+
+    .sidebar-article:hover .sidebar-article-title {
+      color: var(--creme);
+    }
+
+    .sidebar-article-date {
+      font-size: 10px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* CTA sidebar */
+    .sidebar-cta {
+      background: linear-gradient(160deg, var(--brun-noir), #0e1428 100%);
+      border: 1px solid rgba(196, 82, 40, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-align: center;
+    }
+
+    .sidebar-cta p {
+      font-size: 13px;
+      color: var(--beige);
+      line-height: 1.6;
+      margin: 12px 0 20px;
+    }
+
+    /* ============================================================
+       ARTICLES SIMILAIRES — Bottom
+       ============================================================ */
+    .related-section {
+      background: var(--anthracite);
+      padding: 80px 0;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .related-card {
+      background: var(--anthracite-md);
+      border: 1px solid var(--gris-metal);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .related-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(196, 82, 40, 0.3);
+    }
+
+    .related-card-img {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .related-card-img-text {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: rgba(255, 255, 255, 0.07);
+      letter-spacing: -0.02em;
+    }
+
+    .related-card-body {
+      padding: 20px 22px;
+    }
+
+    .related-card-date {
+      font-size: 10px;
+      color: var(--greige-mineral);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .related-card-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--creme);
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .related-card-link {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--terracotta);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Progress de lecture — barre de progression */
+    .reading-progress {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gris-metal);
+      z-index: 999;
+    }
+
+    .reading-progress-bar {
+      height: 100%;
+      background: var(--terracotta);
+      width: 65%;
+      /* Simulé pour la maquette */
+      transition: width 0.1s linear;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BARRE DE PROGRESSION LECTURE -->
+  <div class="reading-progress">
+    <div class="reading-progress-bar"></div>
+  </div>
+
+  <!-- HERO ARTICLE -->
+  <div class="article-hero">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="01-accueil.html">Accueil</a>
+        <span class="breadcrumb-sep">◆</span>
+        <a href="08-blog.html">Blog</a>
+        <span class="breadcrumb-sep">◆</span>
+        <span class="breadcrumb-current">Surf Training</span>
+      </nav>
+
+      <!-- Catégorie + Titre -->
+      <div style="max-width:800px;">
+        <div style="display:flex;gap:10px;margin-bottom:20px;">
+          <span class="badge badge-surf">Surf</span>
+          <span class="badge badge-renfo">Renforcement</span>
+        </div>
+        <h1 class="display display-lg" style="color:var(--creme);line-height:1.05;margin-bottom:20px;">
+          5 EXERCICES POUR<br>
+          <span style="color:var(--terracotta);">PRÉPARER TON CORPS</span><br>
+          AU SURF
+        </h1>
+        <p style="font-size:18px;color:var(--beige);line-height:1.7;max-width:620px;">
+          Explosivité, gainage, équilibre — les 5 mouvements fondamentaux que nos coachs recommandent avant chaque session à Capbreton ou Hossegor.
+        </p>
+      </div>
+
+      <!-- Meta -->
+      <div class="article-meta">
+        <div class="article-meta-author">
+          <div class="meta-avatar">JU</div>
+          <div>
+            <div class="meta-author-name">Julien Moreau</div>
+            <div class="meta-author-role">Coach Surf & Explosivité</div>
+          </div>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">Date <span>12 Février 2026</span></div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">Lecture <span>7 min</span></div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">Niveau <span>Intermédiaire</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- IMAGE HERO ARTICLE -->
+  <div style="background:var(--beton);padding:0 0 0;">
+    <div class="container">
+      <div class="article-visual">
+        <span class="article-visual-text">SURF</span>
+        <div class="article-visual-label">Séance de préparation physique surf — Fit Zone Bénesse-Maremne</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE PRINCIPAL -->
+  <div style="background:var(--beton);padding:0 0 80px;">
+    <div class="container">
+      <div class="article-layout">
+
+        <!-- ============================================================
+             COLONNE ARTICLE
+             ============================================================ -->
+        <article class="article-body">
+
+          <!-- Introduction -->
+          <p class="article-intro">
+            Le surf est exigeant. Une journée dans l'eau sollicite ta rotation thoracique, ton gainage profond, tes hanches et ton explosivité sur les jambes. Sans une préparation physique adaptée, tu perds en performance et tu multiplies les risques de blessures. Voici les 5 exercices clés que Julien, notre coach spécialisé, intègre dans chaque programme surf chez Fit Zone.
+          </p>
+
+          <!-- Section 1 -->
+          <h2 class="article-h2">POURQUOI SE PRÉPARER SPÉCIFIQUEMENT POUR LE SURF ?</h2>
+
+          <p class="article-p">
+            Contrairement à ce qu'on pense, le surf n'est pas un sport passif. Le paddle — le fait de ramer pour attraper une vague — représente jusqu'à 54% du temps passé dans l'eau. Et le pop-up, ce mouvement brusque qui te propulse debout sur la planche, est une explosion musculaire totale.
+          </p>
+
+          <p class="article-p">
+            Un surfeur non préparé va fatigue son épaule en 30 minutes, perdre son équilibre sur les vagues courtes, et finir sa session en étant trop épuisé pour profiter des sets de fin d'après-midi.
+          </p>
+
+          <div class="article-quote">
+            <p>« J'ai vu des surfers intermédiaires progresser de 40% en 8 semaines. Pas en surfant plus, mais en se préparant mieux. Le corps est le premier équipement. »</p>
+            <cite>— Julien Moreau, Coach Programme Surf, Fit Zone</cite>
+          </div>
+
+          <!-- Section 2 — Les 5 exercices -->
+          <h2 class="article-h2">LES 5 EXERCICES FONDAMENTAUX</h2>
+
+          <p class="article-p">
+            Ces exercices sont intégrés au programme Surf Explosivité dispensé tous les mardis et vendredis à 18h30 chez Fit Zone. Ils peuvent aussi être pratiqués en autonomie sur le plateau muscu.
+          </p>
+
+          <!-- IMAGE INLINE -->
+          <div class="article-img">
+            <div class="article-img-inner" style="background:linear-gradient(160deg,#0e1828,#1a3060);">
+              <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0px,transparent 59px,rgba(53,117,212,0.04) 59px,rgba(53,117,212,0.04) 61px),repeating-linear-gradient(0deg,transparent 0px,transparent 59px,rgba(53,117,212,0.04) 59px,rgba(53,117,212,0.04) 61px);"></div>
+              <span style="font-family:var(--font-display);font-size:60px;color:rgba(255,255,255,0.07);letter-spacing:-0.02em;position:relative;z-index:1;">PLATEAU</span>
+            </div>
+            <span class="article-img-caption">Plateau Muscu Fit Zone — Espace Renforcement Surf</span>
+          </div>
+
+          <!-- Liste exercices -->
+          <ol class="exercise-list">
+            <li class="exercise-item">
+              <div class="exercise-num">01</div>
+              <div>
+                <div class="exercise-title">POP-UP DRILL</div>
+                <p class="exercise-desc">Depuis une position allongée ventre au sol, enchaîne le mouvement complet du pop-up en explosivité. 3 séries de 12 répétitions. Objectif : mémoriser le pattern moteur et développer la rapidité de transition.</p>
+                <span class="exercise-tag">3×12 · Explosivité</span>
+              </div>
+            </li>
+            <li class="exercise-item">
+              <div class="exercise-num">02</div>
+              <div>
+                <div class="exercise-title">ROTATION THORACIQUE AVEC CABLE</div>
+                <p class="exercise-desc">Debout, bras tendus, cable fixé à hauteur de poitrine. Rotation complète du tronc en maintenant les hanches fixes. Développe la dissociation buste/bassin, essentielle pour les manœuvres et le regard dans les virages.</p>
+                <span class="exercise-tag">4×15 · Mobilité</span>
+              </div>
+            </li>
+            <li class="exercise-item">
+              <div class="exercise-num">03</div>
+              <div>
+                <div class="exercise-title">GAINAGE LATÉRAL + ROTATION</div>
+                <p class="exercise-desc">Planche latérale avec rotation du bras libre vers le ciel et vers le sol. Renforce la chaîne latérale, fondamentale pour maintenir l'équilibre sur des vagues croisées et des plans d'eau instables.</p>
+                <span class="exercise-tag">3×30s · Gainage</span>
+              </div>
+            </li>
+            <li class="exercise-item">
+              <div class="exercise-num">04</div>
+              <div>
+                <div class="exercise-title">SQUAT SAUTÉ AVEC RÉCEPTION SURF</div>
+                <p class="exercise-desc">Squat classique suivi d'un saut et réception en position de surf (pieds à 45°, genoux fléchis, regard devant). Simule l'atterrissage sur la planche et développe l'absorption des chocs au niveau des chevilles et genoux.</p>
+                <span class="exercise-tag">4×10 · Plyométrie</span>
+              </div>
+            </li>
+            <li class="exercise-item">
+              <div class="exercise-num">05</div>
+              <div>
+                <div class="exercise-title">PADDLE SIMULATION AVEC ÉLASTIQUE</div>
+                <p class="exercise-desc">Allongé sur un banc, élastique fixé devant soi, reproduire le mouvement de paddle en alterné. Travaille les épaules, trapèzes et dorsaux — les muscles qui vont le plus fatigue dans l'eau. Indispensable pour les longues sessions.</p>
+                <span class="exercise-tag">3×20 · Endurance épaule</span>
+              </div>
+            </li>
+          </ol>
+
+          <!-- Astuce / Tip box -->
+          <div class="article-tip">
+            <div class="article-tip-label">Conseil Coach</div>
+            <p>Intègre ces 5 exercices en circuit 2 à 3 fois par semaine, avec 40 secondes de repos entre chaque. En 6 semaines, tu constateras une différence significative sur ta tenue en position de surf et ton endurance de paddle.</p>
+          </div>
+
+          <!-- Section 3 -->
+          <h2 class="article-h2">COMMENT INTÉGRER CE PROGRAMME ?</h2>
+
+          <p class="article-p">
+            Chez Fit Zone, le programme Surf Explosivité est disponible en cours collectifs tous les mardis et vendredis à 18h30, ou en suivis individuels avec Julien. Pour les membres, l'accès aux cours est inclus dans toutes les formules d'abonnement.
+          </p>
+
+          <h3 class="article-h3">PLANIFICATION SUR 4 SEMAINES</h3>
+
+          <p class="article-p">
+            <strong style="color:var(--creme);">Semaine 1-2 :</strong> Apprentissage des patterns. Focus sur la technique, charges légères, 3 séances. L'objectif n'est pas la fatigue musculaire mais la mémorisation motrice.
+          </p>
+          <p class="article-p">
+            <strong style="color:var(--creme);">Semaine 3-4 :</strong> Montée en charge progressive. Augmentation des séries et de l'intensité. Ajout du circuit en fin de séance. Les gains en explosivité deviennent perceptibles en surf dès la 4e semaine.
+          </p>
+
+          <!-- IMAGE 2 -->
+          <div class="article-img">
+            <div class="article-img-inner" style="background:linear-gradient(160deg,#2e1200,#c45228);">
+              <span style="font-family:var(--font-display);font-size:60px;color:rgba(255,255,255,0.07);letter-spacing:-0.02em;position:relative;z-index:1;">XPL</span>
+            </div>
+            <span class="article-img-caption">Session Surf Explosivité — Cours collectif Julien, Fit Zone</span>
+          </div>
+
+          <p class="article-p">
+            La clé est la régularité. Le surf est un sport qui se pratique ponctuellement, surtout en dehors de l'été. Travailler en salle 3 fois par semaine pendant l'inter-saison te permet d'arriver à l'eau en condition optimale dès les premières houles de septembre.
+          </p>
+
+          <!-- Citation finale -->
+          <div class="article-quote">
+            <p>« Le meilleur surfeur est celui qui s'amuse le plus. Et on s'amuse plus quand le corps répond. »</p>
+            <cite>— Julien Moreau</cite>
+          </div>
+
+          <!-- Tags -->
+          <div class="article-tags">
+            <span class="article-tag-label">Tags :</span>
+            <span class="badge badge-surf">Surf</span>
+            <span class="badge badge-renfo">Renforcement</span>
+            <span class="badge-matiere">Explosivité</span>
+            <span class="badge-matiere">Programme</span>
+            <span class="badge-matiere">Capbreton</span>
+          </div>
+
+          <!-- Partage -->
+          <div class="article-share">
+            <span class="article-share-label">Partager</span>
+            <a class="share-btn">FB</a>
+            <a class="share-btn">IG</a>
+            <a class="share-btn">Copier le lien</a>
+          </div>
+
+          <!-- Bio auteur -->
+          <div class="author-bio">
+            <div class="author-bio-avatar">JU</div>
+            <div>
+              <div class="author-bio-label">À propos de l'auteur</div>
+              <div class="author-bio-name">JULIEN MOREAU</div>
+              <div class="author-bio-spec">Coach Programme Surf · Certification BPJEPS</div>
+              <p class="author-bio-text">Surfeur depuis 15 ans sur les spots de Capbreton et Hossegor, Julien a conçu le programme Surf Explosivité de Fit Zone. Sa méthode combine préparation physique fonctionnelle et compréhension des exigences spécifiques du surf de haut niveau.</p>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- ============================================================
+             SIDEBAR DROITE
+             ============================================================ -->
+        <aside class="article-sidebar">
+
+          <!-- Table des matières -->
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">SOMMAIRE</div>
+            <ul class="toc-list">
+              <li class="toc-item">
+                <span class="toc-num">01</span>
+                Pourquoi se préparer pour le surf ?
+              </li>
+              <li class="toc-item">
+                <span class="toc-num">02</span>
+                Les 5 exercices fondamentaux
+              </li>
+              <li class="toc-item">
+                <span class="toc-num">03</span>
+                Comment intégrer ce programme ?
+              </li>
+              <li class="toc-item">
+                <span class="toc-num">04</span>
+                Planification sur 4 semaines
+              </li>
+            </ul>
+          </div>
+
+          <!-- Articles récents -->
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">À LIRE AUSSI</div>
+            <div class="sidebar-article">
+              <div class="sidebar-article-img" style="background:linear-gradient(160deg,#2e1200,#8b3a1c);">
+                <span style="font-family:var(--font-display);font-size:14px;color:rgba(255,255,255,0.3);letter-spacing:0.04em;">HIT</span>
+              </div>
+              <div>
+                <div class="sidebar-article-title">HIIT : Pourquoi 20 minutes suffisent ?</div>
+                <div class="sidebar-article-date">5 Fév 2026 · 5 min</div>
+              </div>
+            </div>
+            <div class="sidebar-article">
+              <div class="sidebar-article-img" style="background:linear-gradient(160deg,#1a1c22,#2a303e);">
+                <span style="font-family:var(--font-display);font-size:14px;color:rgba(255,255,255,0.3);letter-spacing:0.04em;">YGA</span>
+              </div>
+              <div>
+                <div class="sidebar-article-title">Yoga & Musculation : les bénéfices combinés</div>
+                <div class="sidebar-article-date">28 Jan 2026 · 6 min</div>
+              </div>
+            </div>
+            <div class="sidebar-article">
+              <div class="sidebar-article-img" style="background:linear-gradient(160deg,#0e1828,#1a3060);">
+                <span style="font-family:var(--font-display);font-size:14px;color:rgba(255,255,255,0.3);letter-spacing:0.04em;">NTR</span>
+              </div>
+              <div>
+                <div class="sidebar-article-title">Nutrition autour de l'effort : guide pratique</div>
+                <div class="sidebar-article-date">20 Jan 2026 · 8 min</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA abonnement -->
+          <div class="sidebar-cta">
+            <span class="eyebrow" style="display:block;margin-bottom:8px;">Passe à l'action</span>
+            <p>Rejoins le programme Surf Explosivité de Julien. Inclus dans tous les abonnements.</p>
+            <a href="03-tarifs.html" class="btn btn-primary" style="width:100%;justify-content:center;">JE M'ABONNE</a>
+            <div style="margin-top:12px;">
+              <a href="04-cours.html" class="cta-link" style="font-size:11px;">Voir le planning →</a>
+            </div>
+          </div>
+
+          <!-- Badge catégories -->
+          <div class="sidebar-block">
+            <div class="sidebar-block-title">CATÉGORIES</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <span class="badge badge-surf">Surf</span>
+              <span class="badge badge-cardio">Cardio</span>
+              <span class="badge badge-renfo">Renfo.</span>
+              <span class="badge badge-souplesse">Souplesse</span>
+              <span class="badge badge-new">NEW</span>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker-band">
+    <div class="ticker-inner">
+      <span class="ticker-item">SURF TRAINING</span>
+      <span class="ticker-item">MUSCULATION</span>
+      <span class="ticker-item">COURS COLLECTIFS</span>
+      <span class="ticker-item">KIDZONE</span>
+      <span class="ticker-item">MASSAGE SPORTIF</span>
+      <span class="ticker-item">BÉNESSE-MAREMNE</span>
+      <span class="ticker-item">SURF TRAINING</span>
+      <span class="ticker-item">MUSCULATION</span>
+      <span class="ticker-item">COURS COLLECTIFS</span>
+      <span class="ticker-item">KIDZONE</span>
+      <span class="ticker-item">MASSAGE SPORTIF</span>
+      <span class="ticker-item">BÉNESSE-MAREMNE</span>
+    </div>
+  </div>
+
+  <!-- ARTICLES SIMILAIRES -->
+  <section class="related-section">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
+        <div>
+          <span class="eyebrow">Continuer la lecture</span>
+          <h2 class="section-title">ARTICLES SIMILAIRES</h2>
+        </div>
+        <a href="08-blog.html" class="btn btn-outline-terra btn-sm">Voir tout le blog →</a>
+      </div>
+      <div class="related-grid">
+        <div class="related-card">
+          <div class="related-card-img" style="background:linear-gradient(160deg,#2e1200,#8b3a1c);">
+            <span class="related-card-img-text">HIT</span>
+          </div>
+          <div class="related-card-body">
+            <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="badge badge-cardio">Cardio</span><span class="badge badge-renfo">Renfo.</span></div>
+            <div class="related-card-date">5 Février 2026</div>
+            <div class="related-card-title">HIIT : Pourquoi 20 minutes peuvent changer ta condition physique</div>
+            <a class="related-card-link">Lire l'article →</a>
+          </div>
+        </div>
+        <div class="related-card">
+          <div class="related-card-img" style="background:linear-gradient(160deg,#1a1c22,#2a303e);">
+            <span class="related-card-img-text">YGA</span>
+          </div>
+          <div class="related-card-body">
+            <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="badge badge-souplesse">Souplesse</span></div>
+            <div class="related-card-date">28 Janvier 2026</div>
+            <div class="related-card-title">Yoga et musculation : les bénéfices surprenants d'une pratique combinée</div>
+            <a class="related-card-link">Lire l'article →</a>
+          </div>
+        </div>
+        <div class="related-card">
+          <div class="related-card-img" style="background:linear-gradient(160deg,#0e1828,#1a3060);">
+            <span class="related-card-img-text">SRF</span>
+          </div>
+          <div class="related-card-body">
+            <div style="display:flex;gap:8px;margin-bottom:10px;"><span class="badge badge-surf">Surf</span></div>
+            <div class="related-card-date">15 Janvier 2026</div>
+            <div class="related-card-title">Saison surf 2026 : les spots de Capbreton et Hossegor expliqués</div>
+            <a class="related-card-link">Lire l'article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">SURF</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Rejoindre la zone</span>
+      <h2 class="section-title" style="margin-bottom:16px;">PRÊT À SURFER<br><span style="color:var(--terracotta);">PLUS FORT ?</span></h2>
+      <p class="cta-subtitle">Le programme Surf Explosivité de Julien t'attend. Inclus dans tous les abonnements.</p>
+      <div class="cta-actions">
+        <a href="03-tarifs.html" class="btn btn-primary btn-xl">JE PRENDS MON ABONNEMENT</a>
+        <a href="04-cours.html" class="btn btn-outline btn-xl">Voir le planning</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">12 · ARTICLE BLOG</div>
+
+</body>
+
+</html>

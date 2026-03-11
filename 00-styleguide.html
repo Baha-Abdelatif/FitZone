@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Style Guide 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- Style Guide local ---- */
+    .sg-section {
+      padding: 80px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .sg-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--grege);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .sg-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .sg-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.06);
+      margin: 44px 0;
+    }
+
+    /* Swatches */
+    .swatch-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .swatch {
+      width: 130px;
+      text-align: center;
+    }
+
+    .swatch-block {
+      height: 80px;
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .swatch-name {
+      font-size: 12px;
+      color: var(--creme);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .swatch-hex {
+      font-size: 11px;
+      color: var(--grege);
+      font-family: monospace;
+    }
+
+    .swatch-usage {
+      font-size: 10px;
+      color: var(--grege);
+      letter-spacing: 0.05em;
+      margin-top: 3px;
+      font-style: italic;
+    }
+
+    /* Type rows */
+    .type-row {
+      margin-bottom: 20px;
+      padding: 24px 28px;
+      background: rgba(255, 255, 255, 0.025);
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    /* Logo boxes */
+    .logo-box {
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      text-align: center;
+    }
+
+    /* Grid demo */
+    .grid-demo-cell {
+      border-radius: var(--radius);
+      padding: 18px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    /* Composant demo box */
+    .demo-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-top: 12px;
+    }
+
+    /* Couleur section sub-head */
+    .sg-sub {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--beige);
+      margin: 36px 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+  </style>
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="⚡ Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- TITRE PRINCIPAL -->
+    <div style="padding: 80px 0 60px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <span class="eyebrow">DESIGN SYSTEM</span>
+      <h1 class="display display-xl" style="color:var(--creme); margin-bottom:16px;">STYLE GUIDE FIT ZONE 2026</h1>
+      <p class="section-subtitle">Palette minérale · Béton, Anthracite, Grège + accents Terracotta · Typographie A4SPEED + Inter</p>
+      <div class="filters" style="margin-bottom:0;">
+        <span class="filter-btn active">Palette</span>
+        <span class="filter-btn">Typographie</span>
+        <span class="filter-btn">Boutons</span>
+        <span class="filter-btn">Badges</span>
+        <span class="filter-btn">Composants</span>
+        <span class="filter-btn">Logo</span>
+        <span class="filter-btn">Grille</span>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       PALETTE
+       ============================================================ -->
+    <div class="sg-section" id="palette">
+      <div class="sg-title">PALETTE DE COULEURS</div>
+      <p class="section-subtitle" style="margin-bottom:40px;">Toujours utiliser les variables CSS <code
+          style="color:var(--terracotta); font-size:13px;">var(--xxx)</code> — jamais de valeurs hexadécimales directes
+      </p>
+
+      <div class="sg-sub">Dominantes Minérales — Fonds principaux (béton, anthracite)</div>
+      <div class="swatch-grid" style="margin-bottom:36px;">
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--beton);"></div>
+          <div class="swatch-name">--beton</div>
+          <div class="swatch-hex">#161614</div>
+          <div class="swatch-usage">Béton ciré · fond body · hero principal</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--anthracite);"></div>
+          <div class="swatch-name">--anthracite</div>
+          <div class="swatch-hex">#1e1e1c</div>
+          <div class="swatch-usage">Sections primaires minérales</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--anthracite-md);"></div>
+          <div class="swatch-name">--anthracite-md</div>
+          <div class="swatch-hex">#252523</div>
+          <div class="swatch-usage">Sections secondaires · cards minérales</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--gris-mineral);"></div>
+          <div class="swatch-name">--gris-mineral</div>
+          <div class="swatch-hex">#2e2e2b</div>
+          <div class="swatch-usage">Fond hover minéral</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--gris-metal);"></div>
+          <div class="swatch-name">--gris-metal</div>
+          <div class="swatch-hex">#3d3c39</div>
+          <div class="swatch-usage">Métal brossé · séparateurs · bordures</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--acier-noir);"></div>
+          <div class="swatch-name">--acier-noir</div>
+          <div class="swatch-hex">#111110</div>
+          <div class="swatch-usage">Acier noir mat · footer · sidebar</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--navy);"></div>
+          <div class="swatch-name">--navy</div>
+          <div class="swatch-hex">#0e2040</div>
+          <div class="swatch-usage">Bleu marine · mobilier · sections surf</div>
+        </div>
+      </div>
+
+      <div class="sg-sub">Tons Terreux — Accents chauds (marron, terracotta, rouille)</div>
+      <div class="swatch-grid" style="margin-bottom:36px;">
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--brun-noir);"></div>
+          <div class="swatch-name">--brun-noir</div>
+          <div class="swatch-hex">#1a1210</div>
+          <div class="swatch-usage">Accent chaud · CTA band · section brique</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--charcoal);"></div>
+          <div class="swatch-name">--charcoal</div>
+          <div class="swatch-hex">#252018</div>
+          <div class="swatch-usage">Charcoal chaud · sections distinctives chaudes</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--brun-fonce);"></div>
+          <div class="swatch-name">--brun-fonce</div>
+          <div class="swatch-hex">#2e2318</div>
+          <div class="swatch-usage">Cards accent chaud · sections terreuses</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--brun-moyen);"></div>
+          <div class="swatch-name">--brun-moyen</div>
+          <div class="swatch-hex">#4a3828</div>
+          <div class="swatch-usage">Hover chaud · séparateurs</div>
+        </div>
+      </div>
+
+      <div class="sg-sub">Accents &amp; CTA</div>
+      <div class="swatch-grid" style="margin-bottom:36px;">
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--terracotta);"></div>
+          <div class="swatch-name">--terracotta</div>
+          <div class="swatch-hex">#c45228</div>
+          <div class="swatch-usage">CTA principal · eyebrow · icônes actifs</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--terra-dark);"></div>
+          <div class="swatch-name">--terra-dark</div>
+          <div class="swatch-hex">#8b3a1c</div>
+          <div class="swatch-usage">Hover CTA · accent secondaire</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--bleu-elec);"></div>
+          <div class="swatch-name">--bleu-elec</div>
+          <div class="swatch-hex">#3575d4</div>
+          <div class="swatch-usage">Logo uniquement · badge surf</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--brique);"></div>
+          <div class="swatch-name">--brique</div>
+          <div class="swatch-hex">#7a3018</div>
+          <div class="swatch-usage">Détails déco · ligne brique</div>
+        </div>
+      </div>
+
+      <div class="sg-sub">Textes</div>
+      <div class="swatch-grid" style="margin-bottom:36px;">
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--creme);"></div>
+          <div class="swatch-name">--creme</div>
+          <div class="swatch-hex">#f0e8dc</div>
+          <div class="swatch-usage">Titres sur fond sombre</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--beige);"></div>
+          <div class="swatch-name">--beige</div>
+          <div class="swatch-hex">#c4bdb5</div>
+          <div class="swatch-usage">Texte secondaire sur sombre</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--grege);"></div>
+          <div class="swatch-name">--grege</div>
+          <div class="swatch-hex">#8a8278</div>
+          <div class="swatch-usage">Troisième niveau · labels</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--text-dark); border:1px solid rgba(255,255,255,0.15);"></div>
+          <div class="swatch-name">--text-dark</div>
+          <div class="swatch-hex">#1a1210</div>
+          <div class="swatch-usage">Titres sur fond clair</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--text-body); border:1px solid rgba(255,255,255,0.15);"></div>
+          <div class="swatch-name">--text-body</div>
+          <div class="swatch-hex">#3a2e24</div>
+          <div class="swatch-usage">Corps de texte sur fond clair</div>
+        </div>
+      </div>
+
+      <div class="sg-sub">Fonds clairs</div>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--creme-clair); border:1px solid rgba(26,18,16,0.1);"></div>
+          <div class="swatch-name">--creme-clair</div>
+          <div class="swatch-hex">#f5ede3</div>
+          <div class="swatch-usage">Sections blanches/claires — PAS blanc pur</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background:var(--beige-clair); border:1px solid rgba(26,18,16,0.1);"></div>
+          <div class="swatch-name">--beige-clair</div>
+          <div class="swatch-hex">#ede4d8</div>
+          <div class="swatch-usage">Fond alterné clair</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       TYPOGRAPHIE
+       ============================================================ -->
+    <div class="sg-section" id="typography">
+      <div class="sg-title">TYPOGRAPHIE</div>
+      <p class="section-subtitle" style="margin-bottom:40px;"><strong style="color:var(--creme);">A4SPEED Bold</strong>
+        — Affichage / titres display · <strong style="color:var(--creme);">Inter</strong> — Corps de texte</p>
+
+      <div class="sg-sub">Famille Display — A4SPEED Bold</div>
+      <div class="type-row">
+        <div class="sg-label">display-xl · clamp(52px → 100px) · Hero principal</div>
+        <div class="display display-xl" style="color:var(--creme);">FIT ZONE</div>
+      </div>
+      <div class="type-row">
+        <div class="sg-label">display-lg · clamp(38px → 76px) · Hero sections</div>
+        <div class="display display-lg" style="color:var(--creme);">L'ESPACE FIT ZONE</div>
+      </div>
+      <div class="type-row">
+        <div class="sg-label">display-md · clamp(28px → 52px) · Titres CTA</div>
+        <div class="display display-md" style="color:var(--creme);">ENTRE DANS LA ZONE</div>
+      </div>
+      <div class="type-row">
+        <div class="sg-label">display-sm · clamp(20px → 34px) · Sous-sections</div>
+        <div class="display display-sm" style="color:var(--terracotta);">DES COURS POUR CHAQUE OBJECTIF</div>
+      </div>
+
+      <div class="sg-divider"></div>
+
+      <div class="sg-sub">Section titles &amp; Eyebrow</div>
+      <div class="type-row">
+        <div class="sg-label">section-title · clamp(30px → 54px) · Fond sombre</div>
+        <h2 class="section-title">VOTRE PUISSANCE, NOTRE TERRAIN</h2>
+      </div>
+      <div class="type-row" style="background:var(--creme-clair);">
+        <div class="sg-label" style="color:var(--text-body);">section-title.on-light · Fond clair — obligatoire sur
+          fonds clairs</div>
+        <h2 class="section-title on-light">VOTRE PUISSANCE, NOTRE TERRAIN</h2>
+      </div>
+      <div class="type-row">
+        <div class="sg-label">eyebrow · 11px · uppercase · Avant les titres</div>
+        <span class="eyebrow">GALERIE</span>
+      </div>
+
+      <div class="sg-divider"></div>
+
+      <div class="sg-sub">Corps de texte — Inter</div>
+      <div class="type-row">
+        <div class="sg-label">section-subtitle · 17px · Sur fond sombre</div>
+        <p class="section-subtitle" style="margin-bottom:0;">Plateau de musculation complet, cours collectifs, garderie
+          intégrée, massages sportifs. Proche de Capbreton et Hossegor.</p>
+      </div>
+      <div class="type-row" style="background:var(--creme-clair);">
+        <div class="sg-label" style="color:var(--text-body);">section-subtitle.on-light · Sur fond clair</div>
+        <p class="section-subtitle on-light" style="margin-bottom:0;">Plateau de musculation complet, cours collectifs,
+          garderie intégrée, massages sportifs. Proche de Capbreton et Hossegor.</p>
+      </div>
+      <div class="type-row">
+        <div class="sg-label">body 15px · Inter 400 · var(--creme)</div>
+        <p style="font-size:15px; color:var(--creme); line-height:1.7;">Tout ce qu'il vous faut pour atteindre vos
+          objectifs, sous un même toit. Une expérience premium au coeur des Landes.</p>
+      </div>
+      <div class="type-row">
+        <div class="sg-label">caption 11px · Inter 700 · uppercase · var(--grege)</div>
+        <p
+          style="font-size:11px; color:var(--grege); letter-spacing:0.14em; text-transform:uppercase; font-weight:700;">
+          CARDIO · RENFORCEMENT · SOUPLESSE · SURF</p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       BOUTONS
+       ============================================================ -->
+    <div class="sg-section" id="buttons">
+      <div class="sg-title">BOUTONS</div>
+      <p class="section-subtitle" style="margin-bottom:40px;">4 variantes · 3 tailles · Jamais de couleurs directes,
+        toujours via les classes</p>
+
+      <div class="sg-sub">btn-primary — CTA principal (var(--terracotta))</div>
+      <div class="demo-box" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+        <a class="btn btn-primary btn-sm">btn-sm</a>
+        <a class="btn btn-primary">Standard</a>
+        <a class="btn btn-primary btn-xl">btn-xl — Commencer Maintenant</a>
+      </div>
+
+      <div class="sg-sub">btn-outline — Action secondaire sur fond sombre</div>
+      <div class="demo-box" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+        <a class="btn btn-outline btn-sm">btn-sm</a>
+        <a class="btn btn-outline">Découvrir</a>
+        <a class="btn btn-outline btn-xl">VOIR TOUT LE PLANNING</a>
+      </div>
+
+      <div class="sg-sub">btn-outline-terra — Tertiaire terracotta</div>
+      <div class="demo-box" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+        <a class="btn btn-outline-terra btn-sm">btn-sm</a>
+        <a class="btn btn-outline-terra">En savoir plus</a>
+        <a class="btn btn-outline-terra btn-xl">RÉSERVER UNE SÉANCE</a>
+      </div>
+
+      <div class="sg-sub">btn-dark — Sur fond clair ou neutre</div>
+      <div class="demo-box" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+        <a class="btn btn-dark btn-sm">btn-sm</a>
+        <a class="btn btn-dark">Dark Standard</a>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       BADGES
+       ============================================================ -->
+    <div class="sg-section" id="badges">
+      <div class="sg-title">BADGES</div>
+      <p class="section-subtitle" style="margin-bottom:40px;">Catégories de cours, statuts, étiquettes</p>
+
+      <div class="sg-sub">Tous les types de badges</div>
+      <div class="demo-box" style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <span class="badge badge-cardio">CARDIO</span>
+        <span class="badge badge-renfo">RENFO</span>
+        <span class="badge badge-souplesse">SOUPLESSE</span>
+        <span class="badge badge-surf">SURF</span>
+        <span class="badge badge-kidzone">KIDZONE</span>
+        <span class="badge badge-new">NEW</span>
+      </div>
+
+      <div class="sg-sub">Usage typique</div>
+      <div class="demo-box">
+        <p style="font-size:13px; color:var(--grege); margin-bottom:12px;">Dans un blog-card :</p>
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+          <span class="badge badge-surf">SURF</span>
+          <span style="font-size:11px; color:var(--grege); letter-spacing:0.08em; text-transform:uppercase;">12 Février
+            2026</span>
+        </div>
+        <p style="font-size:13px; color:var(--grege); margin-bottom:12px;">Dans un cours-card :</p>
+        <div style="display:flex; gap:8px;">
+          <span class="badge badge-cardio">CARDIO</span>
+          <span class="badge badge-new">NEW</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       COMPOSANTS
+       ============================================================ -->
+    <div class="sg-section" id="components">
+      <div class="sg-title">COMPOSANTS</div>
+      <p class="section-subtitle" style="margin-bottom:40px;">Aperçu des blocs réutilisables — à importer tels quels</p>
+
+      <!-- Pricing card featured -->
+      <div class="sg-sub">pricing-card.featured</div>
+      <div style="max-width:320px; margin:12px 0 36px;">
+        <div class="pricing-card featured">
+          <div class="pricing-name">SANS ENGAGEMENT</div>
+          <div class="pricing-price">39<span style="font-size:32px;">€</span></div>
+          <div class="pricing-period">/mois · Résiliable à tout moment</div>
+          <div class="pricing-sep"></div>
+          <ul class="pricing-features">
+            <li>Full Access plateau muscu</li>
+            <li>Tous les cours collectifs</li>
+            <li>RPM &amp; Cross-Training</li>
+            <li>Cardio Zone</li>
+            <li>Application mobile</li>
+          </ul>
+          <div class="pricing-note">Sans frais de dossier</div>
+          <a class="btn btn-primary" style="width:100%; justify-content:center;">JE CHOISIS</a>
+        </div>
+      </div>
+
+      <!-- Testimonial card -->
+      <div class="sg-sub">testimonial-card</div>
+      <div style="max-width:380px; margin:12px 0 36px;">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">« La salle idéale entre deux sessions de surf. Les programmes spécialisés ont
+            vraiment amélioré mon explosivité sur les vagues. »</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🏄</div>
+            <div>
+              <div class="testimonial-name">Mathieu D.</div>
+              <div class="testimonial-profile">Surfeur — Capbreton</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Value card -->
+      <div class="sg-sub">value-card</div>
+      <div style="max-width:340px; margin:12px 0 36px;">
+        <div class="value-card">
+          <span class="value-number">01</span>
+          <span class="value-icon">⚡</span>
+          <div class="value-title">ÉNERGIE PURE</div>
+          <p class="value-desc">Un espace pensé pour déclencher l'effort. L'ambiance industrielle, la musique, les
+            lumières — tout conspire à vous pousser plus loin.</p>
+        </div>
+      </div>
+
+      <!-- Accordion -->
+      <div class="sg-sub">accordion (FAQ)</div>
+      <div style="max-width:640px; margin:12px 0 36px;">
+        <div class="accordion">
+          <div class="accordion-header">
+            Puis-je suspendre mon abonnement ?
+            <span class="accordion-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            Oui, la suspension est possible pour raison médicale ou départ temporaire. Contactez notre équipe à
+            l'accueil ou par email avec un justificatif.
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordion-header">
+            La garderie KidZone est-elle incluse dans l'abonnement ?
+            <span class="accordion-arrow">▶</span>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordion-header">
+            Y a-t-il des cours d'initiation au surf pour débutants ?
+            <span class="accordion-arrow">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Citation Murale -->
+      <div class="sg-sub">section-mural · citation-murale · mur-texte-watermark</div>
+      <div class="section-mural" style="border-radius:var(--radius-lg); margin:12px 0 12px; overflow:hidden;">
+        <div class="mur-texte-watermark">FOCUS</div>
+        <div style="padding:0 40px; position:relative; z-index:1;">
+          <div class="citation-rule"></div>
+          <p class="citation-murale">DO LESS WITH<br><span class="accent">MORE FOCUS.</span></p>
+        </div>
+      </div>
+      <div class="section-mural-warm" style="border-radius:var(--radius-lg); margin:0 0 36px; overflow:hidden;">
+        <div class="mur-texte-watermark">PERFORMANCE</div>
+        <div style="padding:0 40px; position:relative; z-index:1;">
+          <div class="citation-rule"></div>
+          <p class="citation-murale">PLUS FORT.<br><span class="accent">CHAQUE JOUR.</span></p>
+        </div>
+      </div>
+
+      <!-- Ticker Industriel -->
+      <div class="sg-sub">ticker-band · Bande défilante industrielle</div>
+      <div class="ticker-band" style="border-radius:var(--radius); margin:12px 0 36px;">
+        <div class="ticker-inner">
+          <span class="ticker-item">MUSCULATION</span>
+          <span class="ticker-item">COURS COLLECTIFS</span>
+          <span class="ticker-item">RPM · HIIT · YOGA</span>
+          <span class="ticker-item">KIDZONE GARDERIE</span>
+          <span class="ticker-item">SURF TRAINING</span>
+          <span class="ticker-item">MUSCULATION</span>
+          <span class="ticker-item">COURS COLLECTIFS</span>
+          <span class="ticker-item">RPM · HIIT · YOGA</span>
+          <span class="ticker-item">KIDZONE GARDERIE</span>
+          <span class="ticker-item">SURF TRAINING</span>
+        </div>
+      </div>
+
+      <!-- Séparateurs Métal -->
+      <div class="sg-sub">sep-metal · sep-metal-terra · Séparateurs acier brossé</div>
+      <div style="margin:12px 0 36px; display:flex; flex-direction:column; gap:24px;">
+        <div>
+          <p style="font-size:11px; color:var(--grege); margin-bottom:12px;">sep-metal — Acier brossé neutre</p>
+          <hr class="sep-metal">
+        </div>
+        <div>
+          <p style="font-size:11px; color:var(--grege); margin-bottom:12px;">sep-metal-terra — Acier terracotta</p>
+          <hr class="sep-metal-terra">
+        </div>
+      </div>
+
+      <!-- Reassurance bar -->
+      <div class="sg-sub">reassurance-bar</div>
+      <div class="reassurance-bar" style="border-radius:var(--radius-lg); margin:12px 0 36px;">
+        <div class="reassurance-inner" style="padding:0 40px;">
+          <div class="stat-divider">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Membres actifs</div>
+          </div>
+          <div class="stat-divider">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Cours / semaine</div>
+          </div>
+          <div class="stat-divider">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Coachs certifiés</div>
+          </div>
+          <div>
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Membres satisfaits</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============================================================
+       LOGO
+       ============================================================ -->
+    <div class="sg-section" id="logo">
+      <div class="sg-title">LOGO &amp; IDENTITE</div>
+      <p class="section-subtitle" style="margin-bottom:40px;">3 assets · Règle d'usage : bleu électrique (<code
+          style="color:var(--terracotta);">--bleu-elec</code>) réservé au logo uniquement</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+
+        <div class="logo-box" style="background:var(--brun-noir); border:1px solid rgba(255,255,255,0.07);">
+          <div class="sg-label">Fond brun-noir — Version principale header</div>
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="⚡ Fit Zone" style="height:40px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p style="font-size:11px; color:var(--grege);">Logo PNG.png + texte A4SPEED</p>
+        </div>
+
+        <div class="logo-box" style="background:var(--navy); border:1px solid rgba(255,255,255,0.07);">
+          <div class="sg-label">Fond navy — Sections bleu</div>
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="⚡ Fit Zone" style="height:40px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p style="font-size:11px; color:var(--beige);">Toujours lisible sur fond navy</p>
+        </div>
+
+        <div class="logo-box" style="background:var(--creme-clair); border:1px solid rgba(26,18,16,0.1);">
+          <div class="sg-label" style="color:var(--text-body);">Fond clair — Utilisation restreinte</div>
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="⚡ Fit Zone" style="height:40px;">
+            <span class="logo-text" style="color:var(--text-dark);">FIT ZONE</span>
+          </div>
+          <p style="font-size:11px; color:var(--text-body);">Adapter la couleur du texte</p>
+        </div>
+
+        <div class="logo-box" style="background:var(--brun-fonce); border:1px solid rgba(255,255,255,0.07);">
+          <div class="sg-label">Icône seule — Eclair_PNG.png</div>
+          <img src="./assets/Eclair_PNG.png" alt="⚡ Fit Zone" style="height:60px; width:auto;">
+          <p style="font-size:11px; color:var(--grege);">Navigation, favicon, watermark</p>
+        </div>
+
+        <div class="logo-box" style="background:var(--brun-fonce); border:1px solid rgba(255,255,255,0.07);">
+          <div class="sg-label">Logo complet — Logo PNG.png</div>
+          <img src="./assets/Logo PNG.png" alt="Logo Fit Zone" style="max-height:60px; width:auto;">
+          <p style="font-size:11px; color:var(--grege);">Documents, impression</p>
+        </div>
+
+        <div class="logo-box" style="background:var(--terra-dark); border:1px solid rgba(255,255,255,0.07);">
+          <div class="sg-label">KidZone — KidZone PNG.png</div>
+          <img src="./assets/KidZone PNG.png" alt="KidZone" style="max-height:70px; width:auto;">
+          <p style="font-size:11px; color:var(--creme);">Page KidZone uniquement</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+       GRILLE
+       ============================================================ -->
+    <div class="sg-section" id="grid">
+      <div class="sg-title">GRILLE &amp; ESPACEMENTS</div>
+      <p class="section-subtitle" style="margin-bottom:40px;">Système de mise en page cohérent sur toutes les pages</p>
+
+      <div class="sg-sub">Valeurs fondamentales</div>
+      <div style="display:grid; gap:10px; margin-bottom:36px;">
+        <div
+          style="background:rgba(196,82,40,0.08); border:1px dashed rgba(196,82,40,0.25); border-radius:var(--radius); padding:14px 18px; font-size:13px; color:var(--beige);">
+          Container max-width : <strong style="color:var(--creme);">1280px</strong> — padding horizontal : <strong
+            style="color:var(--creme);">48px</strong>
+        </div>
+        <div
+          style="background:rgba(14,32,64,0.4); border:1px dashed rgba(255,255,255,0.12); border-radius:var(--radius); padding:14px 18px; font-size:13px; color:var(--beige);">
+          Section padding : <strong style="color:var(--creme);">100px vertical</strong> (var(--section-py))
+        </div>
+        <div
+          style="background:rgba(255,255,255,0.025); border:1px dashed rgba(255,255,255,0.08); border-radius:var(--radius); padding:14px 18px; font-size:13px; color:var(--beige);">
+          Gap standard : <strong style="color:var(--creme);">24px</strong> — Gap large split : <strong
+            style="color:var(--creme);">80px</strong> — Gap footer : <strong style="color:var(--creme);">64px</strong>
+        </div>
+        <div
+          style="background:rgba(255,255,255,0.025); border:1px dashed rgba(255,255,255,0.08); border-radius:var(--radius); padding:14px 18px; font-size:13px; color:var(--beige);">
+          Border radius : <strong style="color:var(--creme);">--radius (6px)</strong> · <strong
+            style="color:var(--creme);">--radius-lg (12px)</strong> · <strong style="color:var(--creme);">--radius-xl
+            (20px)</strong>
+        </div>
+      </div>
+
+      <div class="sg-sub">Grille 4 colonnes — espaces-grid, coaches-grid</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:28px;">
+        <div class="grid-demo-cell"
+          style="background:rgba(196,82,40,0.1); border:1px solid rgba(196,82,40,0.2); color:var(--terracotta);">Col 1
+        </div>
+        <div class="grid-demo-cell"
+          style="background:rgba(196,82,40,0.1); border:1px solid rgba(196,82,40,0.2); color:var(--terracotta);">Col 2
+        </div>
+        <div class="grid-demo-cell"
+          style="background:rgba(196,82,40,0.1); border:1px solid rgba(196,82,40,0.2); color:var(--terracotta);">Col 3
+        </div>
+        <div class="grid-demo-cell"
+          style="background:rgba(196,82,40,0.1); border:1px solid rgba(196,82,40,0.2); color:var(--terracotta);">Col 4
+        </div>
+      </div>
+
+      <div class="sg-sub">Grille 3 colonnes — pricing-grid, testimonials-grid, values-grid, blog-grid</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:28px;">
+        <div class="grid-demo-cell"
+          style="background:rgba(14,32,64,0.4); border:1px solid rgba(255,255,255,0.08); color:var(--beige);">Col 1
+        </div>
+        <div class="grid-demo-cell"
+          style="background:rgba(14,32,64,0.4); border:1px solid rgba(255,255,255,0.08); color:var(--beige);">Col 2
+        </div>
+        <div class="grid-demo-cell"
+          style="background:rgba(14,32,64,0.4); border:1px solid rgba(255,255,255,0.08); color:var(--beige);">Col 3
+        </div>
+      </div>
+
+      <div class="sg-sub">Layout split — 2 colonnes égales (split)</div>
+      <div class="split" style="margin-bottom:28px;">
+        <div class="split-visual">🏋️</div>
+        <div>
+          <div class="split-text-accent">
+            <span class="eyebrow">SPLIT LAYOUT</span>
+            <h3 class="section-title">VISUAL + TEXTE</h3>
+            <p class="section-subtitle" style="margin-bottom:24px;">Ce layout est utilisé sur Le Club, Bien-être, Blog.
+              Ratio 1:1 avec gap 80px.</p>
+            <a class="btn btn-primary">CTA PRIMAIRE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sg-sub">Dashboard — sidebar + contenu (260px + 1fr)</div>
+      <div
+        style="display:grid; grid-template-columns:260px 1fr; gap:0; background:var(--brun-fonce); border-radius:var(--radius-lg); overflow:hidden; border:1px solid rgba(255,255,255,0.06);">
+        <div style="background:#130f0d; border-right:1px solid rgba(255,255,255,0.06); padding:20px;">
+          <p style="font-size:11px; color:var(--grege); letter-spacing:0.1em; text-transform:uppercase;">Sidebar 260px
+          </p>
+        </div>
+        <div style="padding:20px;">
+          <p style="font-size:11px; color:var(--grege); letter-spacing:0.1em; text-transform:uppercase;">Contenu
+            principal — 1fr</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation rapide vers toutes les pages -->
+    <div style="padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
+      <span class="eyebrow">NAVIGATION</span>
+      <h2 class="display display-sm" style="color:var(--creme); margin-bottom:32px;">TOUTES LES PAGES</h2>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="01-accueil.html" class="btn btn-primary btn-sm">01 · Accueil</a>
+        <a href="02-le-club.html" class="btn btn-outline btn-sm">02 · Le Club</a>
+        <a href="03-tarifs.html" class="btn btn-outline btn-sm">03 · Tarifs</a>
+        <a href="04-cours.html" class="btn btn-outline btn-sm">04 · Cours</a>
+        <a href="05-kidzone.html" class="btn btn-outline btn-sm">05 · KidZone</a>
+        <a href="06-bien-etre.html" class="btn btn-outline btn-sm">06 · Bien-être</a>
+        <a href="07-galerie.html" class="btn btn-outline btn-sm">07 · Galerie</a>
+        <a href="08-blog.html" class="btn btn-outline btn-sm">08 · Blog</a>
+        <a href="09-contact.html" class="btn btn-outline btn-sm">09 · Contact</a>
+        <a href="10-espace-membre.html" class="btn btn-outline btn-sm">10 · Espace Membre</a>
+        <a href="11-mentions-legales.html" class="btn btn-outline btn-sm">11 · Mentions Légales</a>
+      </div>
+      <p style="margin-top:40px; font-size:12px; color:var(--grege);">Style Guide Fit Zone · Design System 2026 ·
+        NOVASIDE</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">00 · STYLE GUIDE</div>
+
+</body>
+
+</html>

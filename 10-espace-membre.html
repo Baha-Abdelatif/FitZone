@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Espace Membre</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Connexion hero — pour référence visuelle */
+    .login-section {
+      background: var(--beton);
+      padding: 60px 0;
+      text-align: center;
+      display: none;
+      /* état connecté = dashboard visible */
+    }
+
+    /* Dashboard layout */
+    .dashboard-wrapper {
+      background: var(--beton);
+      min-height: calc(100vh - 72px);
+    }
+
+    /* Avatar sidebar */
+    .sidebar-profile {
+      padding: 32px 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: center;
+    }
+
+    .sidebar-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--acier-noir);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--terracotta);
+      margin: 0 auto 14px;
+      border: 2px solid rgba(196, 82, 40, 0.3);
+    }
+
+    .sidebar-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--creme);
+      margin-bottom: 6px;
+    }
+
+    .sidebar-since {
+      font-size: 11px;
+      color: var(--grege);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Sidebar divider */
+    .sidebar-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.05);
+      margin: 8px 0;
+    }
+
+    /* Table réservations */
+    .reservations-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .reservations-table thead th {
+      background: var(--navy);
+      padding: 12px 16px;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--creme);
+      border: none;
+    }
+
+    .reservations-table thead th:first-child {
+      border-radius: 6px 0 0 0;
+    }
+
+    .reservations-table thead th:last-child {
+      border-radius: 0 6px 0 0;
+    }
+
+    .reservations-table tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background var(--transition);
+    }
+
+    .reservations-table tbody tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .reservations-table td {
+      padding: 14px 16px;
+      color: var(--beige);
+      vertical-align: middle;
+    }
+
+    .reservations-table td:first-child {
+      font-weight: 600;
+      color: var(--creme);
+    }
+
+    .status-confirmed {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      background: rgba(60, 160, 60, 0.15);
+      color: #6ed66e;
+      border: 1px solid rgba(60, 160, 60, 0.25);
+    }
+
+    .status-pending {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      background: rgba(210, 130, 20, 0.15);
+      color: #e8a840;
+      border: 1px solid rgba(210, 130, 20, 0.25);
+    }
+
+    /* Factures */
+    .facture-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: var(--beton);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .facture-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .facture-icon {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--terracotta);
+    }
+
+    .facture-label {
+      font-size: 14px;
+      color: var(--creme);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .facture-date {
+      font-size: 11px;
+      color: var(--grege);
+    }
+
+    .facture-dl {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--terracotta);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(196, 82, 40, 0.3);
+      padding-bottom: 1px;
+      transition: color var(--transition);
+    }
+
+    .facture-dl:hover {
+      color: #d4632c;
+    }
+
+    /* Section block dans dashboard */
+    .db-section {
+      background: var(--anthracite-md);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .db-section-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      color: var(--creme);
+      letter-spacing: 0.06em;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    /* CTA upgrade */
+    .upgrade-cta {
+      background: linear-gradient(135deg, var(--anthracite-md) 0%, rgba(196, 82, 40, 0.08) 100%);
+      border: 1px solid rgba(196, 82, 40, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .upgrade-cta-text h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--creme);
+      margin-bottom: 6px;
+      letter-spacing: 0.04em;
+    }
+
+    .upgrade-cta-text p {
+      font-size: 13px;
+      color: var(--beige);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONNEXION (état non connecté — masqué ici pour montrer le dashboard) -->
+  <div class="login-section">
+    <div class="container">
+      <span class="eyebrow">ESPACE MEMBRE</span>
+      <h1 class="display display-md" style="color:var(--creme); margin-bottom:14px;">MON ESPACE MEMBRE</h1>
+      <p style="color:var(--beige);">Connectez-vous pour accéder à votre espace personnel.</p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD — État connecté (Mathieu) -->
+  <div class="dashboard-wrapper">
+    <div class="dashboard">
+
+      <!-- SIDEBAR -->
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-profile">
+          <div class="sidebar-avatar">MR</div>
+          <div class="sidebar-name">Mathieu R.</div>
+          <div class="sidebar-since">Membre depuis 2024</div>
+        </div>
+
+        <nav class="sidebar-nav" style="margin-top:8px;">
+          <a href="#" class="sidebar-item">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">ACC</span>
+            Accueil membre
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">PRF</span>
+            Mon profil
+          </a>
+          <a href="#" class="sidebar-item active">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">ABO</span>
+            Abonnement
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">RES</span>
+            Réservations
+          </a>
+          <div class="sidebar-divider"></div>
+          <a href="#" class="sidebar-item">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">HST</span>
+            Historique
+          </a>
+          <a href="#" class="sidebar-item">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">FCT</span>
+            Factures
+          </a>
+          <div class="sidebar-divider"></div>
+          <a href="01-accueil.html" class="sidebar-item" style="margin-top:auto;">
+            <span class="sidebar-icon" style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">OUT</span>
+            Déconnexion
+          </a>
+        </nav>
+      </aside>
+
+      <!-- CONTENU PRINCIPAL -->
+      <main class="dashboard-content">
+
+        <h2
+          style="font-family:var(--font-display); font-size:28px; color:var(--creme); margin-bottom:32px; letter-spacing:0.04em;">
+          Bonjour, Mathieu
+        </h2>
+
+        <!-- Cartes résumé -->
+        <div class="dashboard-cards">
+          <div class="dashboard-card">
+            <div class="dashboard-card-label">ABONNEMENT</div>
+            <div class="dashboard-card-value" style="font-size:22px; line-height:1.3;">Sans<br>Engagement</div>
+            <div style="margin-top:10px;">
+              <span class="badge badge-cardio">ACTIF</span>
+            </div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-label">PROCHAIN COURS</div>
+            <div class="dashboard-card-value" style="font-size:20px; line-height:1.35;">Yoga<br>· Jeu 18h00</div>
+            <div style="margin-top:10px; font-size:12px; color:var(--grege);">Dans 2 jours</div>
+          </div>
+          <div class="dashboard-card">
+            <div class="dashboard-card-label">SÉANCES CE MOIS</div>
+            <div class="dashboard-card-value">12</div>
+            <div style="margin-top:10px; font-size:12px; color:var(--grege);">Objectif : 16</div>
+          </div>
+        </div>
+
+        <!-- Prochaines réservations -->
+        <div class="db-section">
+          <h3 class="db-section-title">Mes prochaines réservations</h3>
+          <table class="reservations-table">
+            <thead>
+              <tr>
+                <th>COURS</th>
+                <th>DATE</th>
+                <th>HEURE</th>
+                <th>COACH</th>
+                <th>STATUT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Yoga Flow</td>
+                <td>Jeudi 12 mars</td>
+                <td>18h00 – 19h00</td>
+                <td>Sophie M.</td>
+                <td><span class="status-confirmed">● Confirmé</span></td>
+              </tr>
+              <tr>
+                <td>RPM Express</td>
+                <td>Vendredi 13 mars</td>
+                <td>07h00 – 07h45</td>
+                <td>Karim B.</td>
+                <td><span class="status-confirmed">● Confirmé</span></td>
+              </tr>
+              <tr>
+                <td>Body Pump</td>
+                <td>Samedi 14 mars</td>
+                <td>09h30 – 10h30</td>
+                <td>Julie R.</td>
+                <td><span class="status-pending">◌ En attente</span></td>
+              </tr>
+              <tr>
+                <td>Surf Initiation</td>
+                <td>Lundi 16 mars</td>
+                <td>10h00 – 12h00</td>
+                <td>Lucas D.</td>
+                <td><span class="status-pending">◌ En attente</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mes factures -->
+        <div class="db-section">
+          <h3 class="db-section-title">Mes factures récentes</h3>
+
+          <div class="facture-row">
+            <div class="facture-info">
+              <span class="facture-icon">PDF</span>
+              <div>
+                <div class="facture-label">Abonnement Sans Engagement — Mars 2026</div>
+                <div class="facture-date">Émise le 1 mars 2026 · 39,90 €</div>
+              </div>
+            </div>
+            <span class="facture-dl">Télécharger PDF</span>
+          </div>
+
+          <div class="facture-row">
+            <div class="facture-info">
+              <span class="facture-icon">PDF</span>
+              <div>
+                <div class="facture-label">Abonnement Sans Engagement — Février 2026</div>
+                <div class="facture-date">Émise le 1 février 2026 · 39,90 €</div>
+              </div>
+            </div>
+            <span class="facture-dl">Télécharger PDF</span>
+          </div>
+
+        </div>
+
+        <!-- CTA Upgrade -->
+        <div class="upgrade-cta">
+          <div class="upgrade-cta-text">
+            <h3>PASSEZ À L'ABONNEMENT ANNUEL</h3>
+            <p>Économisez 20% et profitez de tous les avantages premium — accès illimité, cours réservés, massage
+              inclus.</p>
+          </div>
+          <a href="03-tarifs.html" class="btn btn-primary" style="white-space:nowrap; flex-shrink:0;">VOIR LES
+            OFFRES</a>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">10 · ESPACE MEMBRE</div>
+
+</body>
+
+</html>

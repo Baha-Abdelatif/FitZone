@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — KidZone Garderie</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-kidzone {
+      background:
+        linear-gradient(160deg, rgba(196, 82, 40, 0.65) 0%, rgba(22, 22, 20, 0.88) 55%, rgba(22, 22, 20, 0.95) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.025) 59px, rgba(255, 255, 255, 0.025) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.025) 59px, rgba(255, 255, 255, 0.025) 61px),
+        linear-gradient(170deg, #1a1208 0%, #161614 100%);
+      position: relative;
+    }
+
+    .hero-kidzone-bg {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-kidzone-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.20;
+    }
+
+    .section-header-centered {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .reassurance-4grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .reassurance-card {
+      background: var(--anthracite);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .reassurance-icon {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      color: var(--terracotta);
+      flex-shrink: 0;
+      min-width: 40px;
+    }
+
+    .reassurance-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      color: var(--creme);
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+
+    .reassurance-desc {
+      font-size: 13px;
+      color: var(--beige);
+      line-height: 1.65;
+    }
+
+    .horaires-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .horaires-table thead th {
+      background: var(--anthracite);
+      padding: 14px 16px;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--creme);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .horaires-table td {
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--beige);
+    }
+
+    .horaires-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .horaires-table .creneaux {
+      color: var(--terracotta);
+      font-weight: 600;
+    }
+
+    .tarifs-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .tarif-bloc {
+      background: var(--anthracite-md);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html" class="active">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero hero-50 hero-kidzone">
+    <div class="hero-kidzone-bg">
+      <img src="./assets/KidZone PNG.png" alt="KidZone" class="hero-kidzone-img">
+    </div>
+    <div class="hero-content" style="position:relative;z-index:2;">
+      <span class="eyebrow">KIDZONE · GARDERIE</span>
+      <h1 class="display display-lg" style="color:var(--creme);margin-bottom:20px;white-space:pre-line;">VOUS ENTRAÎNEZ,
+        VOS ENFANTS S'AMUSENT</h1>
+      <p style="font-size:18px;color:var(--beige);line-height:1.7;max-width:540px;margin:0 auto;">
+        Pendant votre séance, vos enfants sont entre de bonnes mains dans notre espace dédié, sécurisé et plein de vie.
+      </p>
+    </div>
+  </section>
+
+  <!-- LA KIDZONE SPLIT -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="split">
+        <div
+          style="border-radius:var(--radius-xl);overflow:hidden;background:var(--anthracite-md);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:24px;">
+          <img src="./assets/KidZone PNG.png" alt="KidZone Fit Zone"
+            style="max-width:90%;height:auto;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.5));border-radius:var(--radius-lg);">
+        </div>
+        <div class="split-text-accent">
+          <span class="eyebrow">La KidZone</span>
+          <h2 class="section-title" style="margin-bottom:24px;">UN ESPACE RIEN QUE POUR EUX</h2>
+          <p style="color:var(--beige);font-size:16px;line-height:1.8;margin-bottom:24px;">
+            La KidZone Fit Zone est une garderie intégrée pensée pour accueillir vos enfants en toute sécurité pendant
+            votre entraînement. Fini les compromis entre votre santé et leur bonheur.
+          </p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+            <li
+              style="display:flex;align-items:flex-start;gap:12px;color:var(--beige);font-size:15px;line-height:1.5;">
+              <span
+                style="color:var(--terracotta);font-size:16px;font-weight:800;flex-shrink:0;margin-top:1px;">✓</span>
+              <span><strong style="color:var(--creme);">Animateurs formés petite enfance</strong> — Personnel diplômé, bienveillant et
+                expérimenté</span>
+            </li>
+            <li
+              style="display:flex;align-items:flex-start;gap:12px;color:var(--beige);font-size:15px;line-height:1.5;">
+              <span
+                style="color:var(--terracotta);font-size:16px;font-weight:800;flex-shrink:0;margin-top:1px;">✓</span>
+              <span><strong style="color:var(--creme);">Espace sécurisé et adapté</strong> — Zone cloisonnée, équipements homologués, accès
+                contrôlé</span>
+            </li>
+            <li
+              style="display:flex;align-items:flex-start;gap:12px;color:var(--beige);font-size:15px;line-height:1.5;">
+              <span
+                style="color:var(--terracotta);font-size:16px;font-weight:800;flex-shrink:0;margin-top:1px;">✓</span>
+              <span><strong style="color:var(--creme);">Activités ludiques et encadrées</strong> — Jeux, dessin, activités créatives selon
+                l'âge</span>
+            </li>
+            <li
+              style="display:flex;align-items:flex-start;gap:12px;color:var(--beige);font-size:15px;line-height:1.5;">
+              <span
+                style="color:var(--terracotta);font-size:16px;font-weight:800;flex-shrink:0;margin-top:1px;">✓</span>
+              <span><strong style="color:var(--creme);">Disponible pendant vos cours</strong> — Sur les mêmes créneaux horaires que la salle</span>
+            </li>
+          </ul>
+          <a href="09-contact.html" class="btn btn-primary">RÉSERVER UNE SÉANCE →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉASSURANCE 4 POINTS -->
+  <section class="section" style="background:var(--anthracite-md);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Nos garanties</span>
+        <h2 class="section-title">VOTRE ENFANT EN BONNES MAINS</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Tout est pensé pour que vous vous entraîniez l'esprit
+          tranquille</p>
+      </div>
+      <div class="reassurance-4grid">
+        <div class="reassurance-card">
+          <div class="reassurance-icon">PRS</div>
+          <div>
+            <div class="reassurance-title">PERSONNEL QUALIFIÉ</div>
+            <p class="reassurance-desc">Animateurs formés petite enfance et sports adaptés. Formation premiers secours
+              obligatoire. Ratio encadrant/enfant respecté.</p>
+          </div>
+        </div>
+        <div class="reassurance-card">
+          <div class="reassurance-icon">[ ]</div>
+          <div>
+            <div class="reassurance-title">ESPACE SÉCURISÉ</div>
+            <p class="reassurance-desc">Zone entièrement cloisonnée, accès contrôlé par badge. Équipements et mobilier
+              spécifiquement adaptés aux enfants de 2 à 12 ans.</p>
+          </div>
+        </div>
+        <div class="reassurance-card">
+          <div class="reassurance-icon">JEU</div>
+          <div>
+            <div class="reassurance-title">MATÉRIEL LUDIQUE</div>
+            <p class="reassurance-desc">Jeux de construction, activités créatives, coin lecture, activités sportives
+              douces. Programme d'activités adapté aux différents âges.</p>
+          </div>
+        </div>
+        <div class="reassurance-card">
+          <div class="reassurance-icon">+</div>
+          <div>
+            <div class="reassurance-title">PROTOCOLE SANITAIRE</div>
+            <p class="reassurance-desc">Standards d'hygiène stricts, désinfection quotidienne des surfaces et jouets,
+              gel hydroalcoolique disponible, ventilation renforcée.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORAIRES -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Organisation</span>
+        <h2 class="section-title">HORAIRES KIDZONE</h2>
+        <p class="section-subtitle" style="margin:0 auto;">La garderie est disponible sur les principaux créneaux
+          horaires</p>
+      </div>
+      <div style="max-width:700px;margin:0 auto;">
+        <table class="horaires-table">
+          <thead>
+            <tr>
+              <th>JOUR</th>
+              <th>MATIN</th>
+              <th>MIDI</th>
+              <th>APRÈS-MIDI</th>
+              <th>SOIR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Lundi</td>
+              <td class="creneaux">09h–11h</td>
+              <td class="creneaux">11h30–13h</td>
+              <td>—</td>
+              <td class="creneaux">17h–20h</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Mardi</td>
+              <td class="creneaux">09h–11h</td>
+              <td>—</td>
+              <td class="creneaux">16h–18h</td>
+              <td class="creneaux">18h–20h</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Mercredi</td>
+              <td class="creneaux">09h–11h</td>
+              <td class="creneaux">11h30–13h</td>
+              <td class="creneaux">14h–16h</td>
+              <td class="creneaux">17h–20h</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Jeudi</td>
+              <td class="creneaux">09h–11h</td>
+              <td>—</td>
+              <td class="creneaux">16h–18h</td>
+              <td class="creneaux">18h–20h</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Vendredi</td>
+              <td class="creneaux">09h–11h</td>
+              <td class="creneaux">11h30–13h</td>
+              <td>—</td>
+              <td class="creneaux">17h–20h</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Samedi</td>
+              <td class="creneaux">09h–12h</td>
+              <td>—</td>
+              <td class="creneaux">14h–17h</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;color:var(--creme);">Dimanche</td>
+              <td style="color:var(--grege);" colspan="4">Fermé</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="color:var(--grege);font-size:12px;margin-top:16px;font-style:italic;text-align:center;">
+          Réservation recommandée · Capacité limitée · Accueil dès 2 ans
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS KIDZONE -->
+  <section class="section" style="background:var(--brun-noir);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="eyebrow">Tarification</span>
+        <h2 class="section-title">TARIFS KIDZONE</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Formule flexible selon votre rythme d'entraînement</p>
+      </div>
+      <div class="tarifs-2col" style="max-width:700px;margin:0 auto;">
+        <div class="tarif-bloc">
+          <div style="font-family:var(--font-display);font-size:28px;color:var(--terracotta);margin-bottom:16px;letter-spacing:0.1em;">UNI</div>
+          <div
+            style="font-family:var(--font-display);font-size:14px;letter-spacing:0.1em;color:var(--beige);margin-bottom:20px;">
+            SÉANCE À L'UNITÉ</div>
+          <div
+            style="font-family:var(--font-display);font-size:64px;color:var(--terracotta);line-height:1;margin-bottom:6px;">
+            10€</div>
+          <div style="font-size:14px;color:var(--grege);margin-bottom:24px;">/séance · sans engagement</div>
+          <p style="font-size:14px;color:var(--beige);line-height:1.7;margin-bottom:28px;">Idéal pour tester la garderie
+            ou pour un entraînement ponctuel. Réservation à l'accueil ou par téléphone.</p>
+          <a href="09-contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">RÉSERVER</a>
+        </div>
+        <div class="tarif-bloc" style="border-color:rgba(196,82,40,0.35);">
+          <div style="font-family:var(--font-display);font-size:28px;color:var(--terracotta);margin-bottom:16px;letter-spacing:0.1em;">ABO</div>
+          <div
+            style="font-family:var(--font-display);font-size:14px;letter-spacing:0.1em;color:var(--beige);margin-bottom:20px;">
+            AVEC ABONNEMENT</div>
+          <div
+            style="font-family:var(--font-display);font-size:64px;color:var(--terracotta);line-height:1;margin-bottom:6px;">
+            +20€</div>
+          <div style="font-size:14px;color:var(--grege);margin-bottom:24px;">/mois · accès illimité</div>
+          <p style="font-size:14px;color:var(--beige);line-height:1.7;margin-bottom:28px;">L'abonnement <strong
+              style="color:var(--creme);">Standard + Garderie</strong> inclut la KidZone illimitée pour <strong
+              style="color:var(--terracotta);">60€/mois</strong> au total. La formule idéale pour les familles.</p>
+          <a href="03-tarifs.html" class="btn btn-primary" style="width:100%;justify-content:center;">CHOISIR L'ABO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">KIDZONE</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Essayer la KidZone</span>
+      <h2 class="section-title" style="margin-bottom:16px;">RÉSERVER UNE SÉANCE GARDERIE<br><span style="color:var(--terracotta);">PREMIÈRE SÉANCE DÉCOUVERTE</span></h2>
+      <p class="cta-subtitle">Venez avec votre enfant, repartez conquis.</p>
+      <div class="cta-actions">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">RÉSERVER MAINTENANT</a>
+        <a href="03-tarifs.html" class="btn btn-outline btn-xl">Voir l'abonnement famille</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">05 · KIDZONE</div>
+</body>
+
+</html>

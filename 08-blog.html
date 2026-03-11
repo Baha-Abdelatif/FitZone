@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit Zone — Blog & Actualités</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-blog {
+      background:
+        linear-gradient(160deg, rgba(22, 22, 20, 0.95) 0%, rgba(14, 32, 64, 0.58) 52%, rgba(22, 22, 20, 0.92) 100%),
+        repeating-linear-gradient(90deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        repeating-linear-gradient(0deg, transparent 0px, transparent 59px, rgba(255, 255, 255, 0.03) 59px, rgba(255, 255, 255, 0.03) 61px),
+        linear-gradient(170deg, #171716 0%, #0e1428 42%, #161614 100%);
+    }
+
+    .featured-article {
+      background: var(--anthracite-md);
+      padding: 60px;
+      margin-bottom: 0;
+    }
+
+    .featured-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .featured-visual {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: var(--anthracite);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 48px;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.2);
+      position: relative;
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+
+    .featured-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 40px);
+      color: var(--creme);
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .featured-excerpt {
+      font-size: 15px;
+      color: var(--beige);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .featured-date {
+      font-size: 11px;
+      color: var(--grege);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .featured-read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--terracotta);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(196, 82, 40, 0.3);
+      padding-bottom: 2px;
+      transition: color var(--transition), border-color var(--transition);
+    }
+
+    .featured-read-link:hover {
+      color: #d4632c;
+      border-color: #d4632c;
+    }
+
+    .blog-filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .section-header-left {
+      margin-bottom: 64px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+        <span class="logo-text">FIT ZONE</span>
+      </div>
+      <nav class="nav">
+        <a href="01-accueil.html">Accueil</a>
+        <a href="04-cours.html">Cours</a>
+        <a href="03-tarifs.html">Tarifs</a>
+        <a href="05-kidzone.html">KidZone</a>
+        <a href="06-bien-etre.html">Bien-être</a>
+        <a href="02-le-club.html">Le club</a>
+        <a href="09-contact.html" class="nav-cta">Commencer</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO 30vh -->
+  <section class="hero hero-30 hero-blog">
+    <div class="hero-content">
+      <span class="eyebrow">BLOG &amp; ACTUALITÉS</span>
+      <h1 class="display display-lg" style="color:var(--creme); margin-bottom:14px;">RESTE DANS LA ZONE</h1>
+      <p style="font-size:17px; color:var(--beige);">Entraînement, nutrition, news et events</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE MIS EN AVANT -->
+  <div class="featured-article">
+    <div class="featured-layout">
+      <div class="featured-visual">
+        SRF
+        <div class="featured-badge">
+          <span class="badge badge-surf">SURF</span>
+        </div>
+      </div>
+      <div>
+        <span class="badge badge-surf" style="margin-bottom:16px; display:inline-flex;">SURF</span>
+        <p class="featured-date">12 Février 2026</p>
+        <h2 class="featured-title">COMMENT LE SURF AMÉLIORE TON CORPS ET TON MENTAL</h2>
+        <p class="featured-excerpt">Le surf n'est pas qu'un sport — c'est un mode de vie qui transforme le corps et
+          l'esprit. Découvrez comment nos séances d'initiation au surf s'intègrent parfaitement dans votre programme
+          fitness global. Entre gainage, équilibre et pleine conscience, la vague vous tend les bras.</p>
+        <a href="#" class="featured-read-link">Lire l'article →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CITATION MURALE -->
+  <div class="section-mural">
+    <div class="mur-texte-watermark">BLOG</div>
+    <div class="container">
+      <div class="citation-rule"></div>
+      <p class="citation-murale">RESTE DANS<br><span class="accent">LA ZONE.</span></p>
+    </div>
+  </div>
+
+  <!-- BLOG GRID -->
+  <section class="section" style="background:var(--beton);">
+    <div class="container">
+
+      <!-- Filtres -->
+      <div class="blog-filters">
+        <button class="filter-btn active">TOUS</button>
+        <button class="filter-btn">ENTRAÎNEMENT</button>
+        <button class="filter-btn">NUTRITION</button>
+        <button class="filter-btn">NEWS</button>
+        <button class="filter-btn">ÉVÉNEMENTS</button>
+        <button class="filter-btn">SURF</button>
+      </div>
+
+      <!-- Grid 9 articles -->
+      <div class="blog-grid">
+
+        <!-- Article 1 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, var(--anthracite) 0%, #201810 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            MSC
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-renfo" style="margin-bottom:10px;">RENFO</span>
+            <p class="blog-date">8 Mars 2026</p>
+            <h3 class="blog-title">5 exercices incontournables pour développer votre force fonctionnelle</h3>
+            <p class="blog-excerpt">Le squat, le deadlift, le développé couché... Ces mouvements de base sont la colonne
+              vertébrale d'un programme solide.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, var(--navy) 0%, #0a1830 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            SRF
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-surf" style="margin-bottom:10px;">SURF</span>
+            <p class="blog-date">3 Mars 2026</p>
+            <h3 class="blog-title">Préparer sa saison de surf : le programme fitness idéal</h3>
+            <p class="blog-excerpt">Gainage, explosivité, souplesse des épaules — voici comment Fit Zone vous prépare
+              pour rider les premières vagues.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, #1c2018 0%, #181e12 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            NTR
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-souplesse" style="margin-bottom:10px;">NUTRITION</span>
+            <p class="blog-date">28 Février 2026</p>
+            <h3 class="blog-title">Nutrition sportive : que manger avant et après l'entraînement ?</h3>
+            <p class="blog-excerpt">Timing des repas, macros essentiels, hydratation... Optimisez vos performances avec
+              une alimentation adaptée à vos objectifs.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, #281408 0%, var(--terra-dark) 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            HIT
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-cardio" style="margin-bottom:10px;">CARDIO</span>
+            <p class="blog-date">22 Février 2026</p>
+            <h3 class="blog-title">HIIT vs cardio modéré : lequel choisir pour brûler plus de graisses ?</h3>
+            <p class="blog-excerpt">Le débat est ouvert depuis des années. Nos coachs tranchent avec des études à
+              l'appui et des recommandations personnalisées.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, var(--anthracite) 0%, #181814 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            NEW
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-new" style="margin-bottom:10px;">NEW</span>
+            <p class="blog-date">18 Février 2026</p>
+            <h3 class="blog-title">Fit Zone ouvre ses nouvelles cabines de récupération infrarouge</h3>
+            <p class="blog-excerpt">Un espace bien-être encore plus complet. Découvrez nos nouvelles installations
+              dédiées à la récupération active et au soin.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 6 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, #1e1008 0%, #2a1408 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            RPM
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-cardio" style="margin-bottom:10px;">ENTRAÎNEMENT</span>
+            <p class="blog-date">14 Février 2026</p>
+            <h3 class="blog-title">Brûlez 600 calories en 45 minutes avec notre RPM Express</h3>
+            <p class="blog-excerpt">Notre nouveau cours RPM compressé est conçu pour les actifs pressés. Intensité
+              maximale, résultats garantis.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 7 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, #101820 0%, #0e1428 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            YGA
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-souplesse" style="margin-bottom:10px;">BIEN-ÊTRE</span>
+            <p class="blog-date">10 Février 2026</p>
+            <h3 class="blog-title">Yoga et musculation : les deux pratiques qui se complètent</h3>
+            <p class="blog-excerpt">Souplesse, mobilité articulaire et récupération — intégrer le yoga à votre routine
+              muscu change tout sur le long terme.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 8 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, var(--navy) 0%, #1a3050 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            SRF
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-surf" style="margin-bottom:10px;">SURF</span>
+            <p class="blog-date">5 Février 2026</p>
+            <h3 class="blog-title">Hossegor - Capbreton : pourquoi notre région est un paradis du surf</h3>
+            <p class="blog-excerpt">Entre les spots de renommée mondiale et notre programme d'initiation, tout est réuni
+              pour votre progression surf.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+        <!-- Article 9 -->
+        <div class="blog-card">
+          <div class="blog-card-img" style="background:linear-gradient(135deg, #1a1810 0%, var(--anthracite-md) 100%);font-family:var(--font-display);font-size:28px;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
+            EVT
+          </div>
+          <div class="blog-card-body">
+            <span class="badge badge-new" style="margin-bottom:10px;">ÉVÉNEMENT</span>
+            <p class="blog-date">1 Février 2026</p>
+            <h3 class="blog-title">Open Day Fit Zone — 15 mars : portes ouvertes & cours gratuits</h3>
+            <p class="blog-excerpt">Venez découvrir la salle, rencontrer les coachs et participer à des cours gratuits
+              toute la journée. Inscription recommandée.</p>
+            <a href="#" class="blog-link">Lire la suite →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section" style="background:var(--anthracite);">
+    <div class="container">
+      <div class="newsletter">
+        <span class="eyebrow">NEWSLETTER</span>
+        <h3>RESTE DANS LA ZONE</h3>
+        <p>Articles exclusifs, conseils de coachs et offres réservées aux abonnés. Pas de spam, jamais.</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" class="form-control" placeholder="Ton adresse email" style="flex:1;">
+          <button type="submit" class="btn btn-primary">S'INSCRIRE</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" style="background:var(--brun-noir);">
+    <div class="mur-texte-watermark">BLOG</div>
+    <div class="container" style="position:relative;z-index:1;">
+      <span class="eyebrow" style="display:block;text-align:center;margin-bottom:20px;">Rejoindre Fit Zone</span>
+      <h2 class="section-title" style="margin-bottom:16px;">PASSE À L'ACTION<br><span style="color:var(--terracotta);">SÉANCE DÉCOUVERTE 15€</span></h2>
+      <p class="cta-subtitle">Sans engagement · Accès à toute la salle</p>
+      <div class="cta-actions">
+        <a href="09-contact.html" class="btn btn-primary btn-xl">RÉSERVER MA SÉANCE</a>
+        <a href="03-tarifs.html" class="btn btn-outline btn-xl">Voir les abonnements</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/Eclair_PNG.png" alt="Fit Zone" style="height:34px;">
+            <span class="logo-text">FIT ZONE</span>
+          </div>
+          <p>Votre zone, votre puissance, votre futur.<br>La salle premium de la Côte Basque.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">FB</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">IG</a>
+            <a href="#" class="social-icon" style="font-size:10px;font-weight:800;letter-spacing:0.04em;">YT</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="01-accueil.html">Accueil</a></li>
+            <li><a href="04-cours.html">Cours</a></li>
+            <li><a href="03-tarifs.html">Tarifs</a></li>
+            <li><a href="02-le-club.html">Le club</a></li>
+            <li><a href="07-galerie.html">Galerie</a></li>
+            <li><a href="08-blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="02-le-club.html">Musculation</a></li>
+            <li><a href="04-cours.html">Cours collectifs</a></li>
+            <li><a href="05-kidzone.html">KidZone</a></li>
+            <li><a href="06-bien-etre.html">Bien-être &amp; Massage</a></li>
+            <li><a href="04-cours.html">Programme Surf</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">05 XX XX XX XX</a></li>
+            <li><a href="#">contact@fitzone-benesse.fr</a></li>
+            <li><a href="#">254 Chemin du Bayonnais</a></li>
+            <li><a href="#">40230 Bénesse-Maremne</a></li>
+            <li><a href="09-contact.html">Nous contacter →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Fit Zone · Tous droits réservés</p>
+        <div style="display:flex;gap:24px;">
+          <a href="11-mentions-legales.html">Mentions légales</a>
+          <a href="11-mentions-legales.html">CGV</a>
+          <a href="11-mentions-legales.html">Confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="page-indicator">08 · BLOG</div>
+
+</body>
+
+</html>
