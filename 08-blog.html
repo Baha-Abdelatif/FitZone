@@ -105,6 +105,23 @@
     .section-header-left {
       margin-bottom: 64px;
     }
+
+    @media (max-width: 810px) {
+      .featured-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .featured-article {
+        padding: 36px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .featured-article {
+        padding: 28px 16px;
+      }
+    }
   </style>
 </head>
 
@@ -424,6 +441,7 @@
 
   <div class="page-indicator">08 · BLOG</div>
 
+  <script src="responsive.js"></script>
 </body>
 
 </html>

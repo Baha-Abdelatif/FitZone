@@ -92,6 +92,7 @@
       text-align: center;
       font-size: 12px;
       color: var(--grege);
+      min-width: 80px;
     }
 
     .slot-dispo {
@@ -117,6 +118,13 @@
       color: var(--grege);
       font-size: 11px;
       text-decoration: line-through;
+    }
+
+    @media (max-width: 810px) {
+      /* Reset du grid-column inline sur la 4ème value-card */
+      .value-card[style*="grid-column"] {
+        grid-column: auto !important;
+      }
     }
   </style>
 </head>
@@ -307,7 +315,7 @@
         style="max-width:760px;margin:0 auto 40px;background:var(--anthracite-md);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);overflow:hidden;">
         <!-- En-tête calendrier -->
         <div
-          style="background:var(--navy);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;">
+          style="background:var(--navy);padding:16px 24px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:center;">
           <span style="font-family:var(--font-display);font-size:14px;color:var(--creme);letter-spacing:0.06em;">SEMAINE
             DU 9 AU 15 MARS 2026</span>
           <span style="font-size:12px;color:var(--beige);">Nicolas M. · Massage sportif</span>
@@ -554,6 +562,7 @@
   </footer>
 
   <div class="page-indicator">06 · BIEN-ÊTRE</div>
+  <script src="responsive.js"></script>
 </body>
 
 </html>

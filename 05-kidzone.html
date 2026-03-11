@@ -123,6 +123,42 @@
       padding: 40px 36px;
       text-align: center;
     }
+
+    /* Wrapper scrollable pour la grille horaires */
+    .horaires-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    @media (max-width: 810px) {
+      .reassurance-4grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tarifs-2col {
+        grid-template-columns: 1fr;
+      }
+
+      .horaires-table {
+        font-size: 13px;
+        min-width: 480px;
+      }
+
+      .horaires-table thead th,
+      .horaires-table td {
+        padding: 10px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .reassurance-card {
+        padding: 24px 20px;
+      }
+
+      .tarif-bloc {
+        padding: 32px 24px;
+      }
+    }
   </style>
 </head>
 
@@ -269,6 +305,7 @@
           horaires</p>
       </div>
       <div style="max-width:700px;margin:0 auto;">
+        <div class="horaires-wrap">
         <table class="horaires-table">
           <thead>
             <tr>
@@ -328,6 +365,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
         <p style="color:var(--grege);font-size:12px;margin-top:16px;font-style:italic;text-align:center;">
           Réservation recommandée · Capacité limitée · Accueil dès 2 ans
         </p>
@@ -454,6 +492,7 @@
   </footer>
 
   <div class="page-indicator">05 · KIDZONE</div>
+  <script src="responsive.js"></script>
 </body>
 
 </html>

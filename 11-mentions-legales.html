@@ -145,6 +145,38 @@
       margin-bottom: 4px;
       font-size: 13px;
     }
+
+    @media (max-width: 810px) {
+      .tabs-nav-inner {
+        padding: 0 16px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .tab-btn {
+        padding: 14px 16px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .legal-body {
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tabs-nav-inner {
+        padding: 0 8px;
+      }
+
+      .tab-btn {
+        padding: 12px 12px;
+      }
+
+      .legal-body {
+        padding: 0 4px;
+      }
+    }
   </style>
 </head>
 
@@ -447,6 +479,7 @@
     }
   </script>
 
+  <script src="responsive.js"></script>
 </body>
 
 </html>

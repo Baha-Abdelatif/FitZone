@@ -2217,3 +2217,543 @@ select.form-control {
     transform: translateX(-50%);
   }
 }
+
+/* ============================================================
+   RESPONSIVE — Tablettes & Smartphones
+   ============================================================ */
+
+/* Hamburger (caché sur desktop) */
+.nav-toggle {
+  display: none;
+}
+
+/* Planning table — conteneur scrollable */
+.planning-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ---- Tablette (≤ 1024px) ---- */
+@media (max-width: 1024px) {
+  :root {
+    --section-py: 80px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .nav a {
+    font-size: 11px;
+  }
+
+  .espaces-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cours-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coaches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split {
+    gap: 48px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .masonry {
+    columns: 2;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid .wide {
+    grid-column: span 1;
+  }
+
+  .gallery-grid .tall {
+    grid-row: span 1;
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pass-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---- Mobile (≤ 768px) ---- */
+@media (max-width: 810px) {
+  :root {
+    --section-py: 64px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Header */
+  .header {
+    height: 64px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Navigation mobile */
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111110;
+    border-top: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 998;
+    padding-top: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 40px;
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: var(--beige);
+  }
+
+  .nav a.active::after {
+    bottom: -6px;
+  }
+
+  .nav-cta {
+    padding: 14px 36px !important;
+    font-size: 14px !important;
+  }
+
+  /* Hamburger */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--creme);
+    border-radius: 2px;
+    transition: var(--transition);
+    transform-origin: center;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Reassurance */
+  .reassurance-bar {
+    padding: 32px 0;
+  }
+
+  .reassurance-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-divider {
+    border-right: none;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+
+  /* Espaces */
+  .espaces-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .espace-card {
+    aspect-ratio: 1/1;
+  }
+
+  /* Cours */
+  .cours-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Split */
+  .split {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .split.reverse> :first-child,
+  .split.reverse> :last-child {
+    order: unset;
+  }
+
+  .split-visual {
+    aspect-ratio: 16/9;
+  }
+
+  /* Values */
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    padding: 36px 28px;
+  }
+
+  /* Coaches */
+  .coaches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Masonry */
+  .masonry {
+    columns: 2;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+
+  .gallery-grid .wide,
+  .gallery-grid .tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  /* Map */
+  .map-section {
+    grid-template-columns: 1fr;
+  }
+
+  .map-placeholder {
+    min-height: 260px;
+  }
+
+  .map-info {
+    padding: 40px 28px;
+    gap: 20px;
+  }
+
+  /* Newsletter */
+  .newsletter {
+    padding: 40px 24px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  /* Engagements */
+  .engagements-list {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 56px 0 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-bottom>div {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Dashboard */
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    display: none;
+  }
+
+  .dashboard-content {
+    padding: 28px 20px;
+    min-width: 0; /* empêche le grid item de dépasser la largeur de la colonne */
+  }
+
+  /* Cards dashboard — scroll horizontal swipeable */
+  .dashboard-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain; /* swipe des cartes sans scroller la page */
+    gap: 12px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+
+  .dashboard-card {
+    min-width: 160px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: 16px;
+  }
+
+  .dashboard-card-value {
+    font-size: 22px;
+  }
+
+  /* Blog */
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Pass — scroll horizontal swipeable */
+  .pass-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding-bottom: 12px;
+  }
+
+  .pass-card {
+    min-width: 220px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  /* Contact */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  /* Hero */
+  .hero-content {
+    padding: 40px 20px;
+  }
+
+  /* Sections spéciales */
+  .surf-section {
+    padding: 80px 0;
+  }
+
+  .surf-content {
+    padding: 0 20px;
+  }
+
+  .cta-band {
+    padding: 80px 0;
+  }
+
+  .section-mural,
+  .section-mural-warm {
+    padding: 64px 0;
+  }
+
+  /* Section headers */
+  .section-header-centered {
+    margin-bottom: 48px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+}
+
+/* ---- Petit mobile (≤ 480px) ---- */
+@media (max-width: 480px) {
+  :root {
+    --section-py: 52px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .display-xl {
+    font-size: clamp(36px, 9vw, 52px);
+  }
+
+  .display-lg {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+
+  .espaces-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .espace-card {
+    aspect-ratio: 4/3;
+  }
+
+  .masonry {
+    columns: 1;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pass-grid {
+    padding-bottom: 0;
+  }
+
+  .pricing-card {
+    padding: 32px 24px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header-centered {
+    margin-bottom: 36px;
+  }
+
+  .hero-full {
+    min-height: 90vh;
+  }
+
+  /* Boutons xl — texte long sur mobile */
+  .btn-xl {
+    padding: 16px 24px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* Coaches — 1 colonne sur très petit mobile */
+  .coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Masonry — 1 colonne */
+  .masonry {
+    columns: 1;
+  }
+
+  /* Espace membre — upgrade CTA empilé */
+  .upgrade-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Factures — label tronqué sur petit écran */
+  .facture-label {
+    font-size: 13px;
+  }
+}
+
+/* ---- Très petit mobile (≤ 380px) ---- */
+@media (max-width: 380px) {
+  .facture-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .facture-dl {
+    align-self: flex-start;
+  }
+}

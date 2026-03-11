@@ -110,6 +110,23 @@
     .surf-cours-card:hover {
       border-color: rgba(53, 117, 212, 0.5);
     }
+
+    @media (max-width: 1024px) {
+      .cours-3col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 810px) {
+      .cours-3col {
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+      }
+
+      .cours-surf-2col {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -629,6 +646,7 @@
   </footer>
 
   <div class="page-indicator">04 · COURS</div>
+  <script src="responsive.js"></script>
 </body>
 
 </html>

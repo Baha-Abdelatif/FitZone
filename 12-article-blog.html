@@ -698,6 +698,29 @@
       /* Simulé pour la maquette */
       transition: width 0.1s linear;
     }
+
+    @media (max-width: 810px) {
+      .related-section {
+        padding: 56px 0;
+      }
+
+      .related-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding-bottom: 16px;
+        margin-top: 32px;
+      }
+
+      .related-card {
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+      }
+    }
   </style>
 </head>
 
@@ -1219,6 +1242,7 @@
 
   <div class="page-indicator">12 · ARTICLE BLOG</div>
 
+  <script src="responsive.js"></script>
 </body>
 
 </html>

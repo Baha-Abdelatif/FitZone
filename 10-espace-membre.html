@@ -173,6 +173,8 @@
       color: var(--creme);
       font-weight: 600;
       margin-bottom: 2px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .facture-date {
@@ -225,6 +227,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      min-width: 0;
     }
 
     .upgrade-cta-text h3 {
@@ -233,11 +236,179 @@
       color: var(--creme);
       margin-bottom: 6px;
       letter-spacing: 0.04em;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
     .upgrade-cta-text p {
       font-size: 13px;
       color: var(--beige);
+    }
+
+    /* Titre de bienvenue */
+    .dashboard-greeting {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--creme);
+      margin-bottom: 32px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Valeurs de taille intermédiaire dans les cards */
+    .dashboard-card-value--md {
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    /* Wrapper scrollable pour la table */
+    .reservations-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+    }
+
+    @media (max-width: 810px) {
+      .reservations-table {
+        width: auto;
+        min-width: 480px; /* force le scroll horizontal du wrapper */
+      }
+    }
+
+    /* Barre de profil mobile (remplace la sidebar sur mobile) */
+    .mobile-profile-bar {
+      display: none;
+      background: var(--acier-noir);
+      border-bottom: 1px solid var(--gris-metal);
+      padding: 16px 20px;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mobile-profile-bar .mobile-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--acier-noir);
+      border: 2px solid rgba(196, 82, 40, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    .mobile-profile-bar .mobile-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--creme);
+    }
+
+    .mobile-profile-bar .mobile-since {
+      font-size: 10px;
+      color: var(--grege);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Nav horizontale mobile */
+    .mobile-dashboard-nav {
+      display: none;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      background: var(--acier-noir);
+      border-bottom: 1px solid var(--gris-metal);
+      padding: 0 12px;
+      gap: 0;
+    }
+
+    .mobile-dashboard-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 14px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--grege);
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color var(--transition), border-color var(--transition);
+    }
+
+    .mobile-dashboard-nav a.active {
+      color: var(--creme);
+      border-bottom-color: var(--terracotta);
+    }
+
+    .mobile-dashboard-nav a:hover {
+      color: var(--creme);
+    }
+
+    @media (max-width: 810px) {
+      .abbr {
+        display: none;
+      }
+
+      .mobile-profile-bar {
+        display: flex;
+      }
+
+      .mobile-dashboard-nav {
+        display: flex;
+      }
+
+      .dashboard-greeting {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .dashboard-card-value--md {
+        font-size: 18px;
+      }
+
+      .db-section {
+        padding: 20px 16px;
+      }
+
+      .upgrade-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 20px;
+      }
+
+      .upgrade-cta .btn {
+        width: 100%;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+        flex-shrink: unset;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .facture-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .facture-dl {
+        align-self: flex-start;
+      }
+
+      .facture-label {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 13px;
+      }
+
+      .upgrade-cta {
+        padding: 24px 20px;
+      }
     }
   </style>
 </head>
@@ -274,6 +445,25 @@
 
   <!-- DASHBOARD — État connecté (Mathieu) -->
   <div class="dashboard-wrapper">
+
+    <!-- Profil + navigation horizontale (mobile uniquement) -->
+    <div class="mobile-profile-bar">
+      <div class="mobile-avatar">MR</div>
+      <div>
+        <div class="mobile-name">Mathieu R.</div>
+        <div class="mobile-since">Membre depuis 2024</div>
+      </div>
+    </div>
+    <nav class="mobile-dashboard-nav">
+      <a href="#"><span class="abbr">ACC · </span>Accueil</a>
+      <a href="#"><span class="abbr">PRF · </span>Profil</a>
+      <a href="#" class="active"><span class="abbr">ABO · </span>Abonnement</a>
+      <a href="#"><span class="abbr">RES · </span>Réservations</a>
+      <a href="#"><span class="abbr">HST · </span>Historique</a>
+      <a href="#"><span class="abbr">FCT · </span>Factures</a>
+      <a href="index.html"><span class="abbr">OUT · </span>Déconnexion</a>
+    </nav>
+
     <div class="dashboard">
 
       <!-- SIDEBAR -->
@@ -286,39 +476,39 @@
 
         <nav class="sidebar-nav" style="margin-top:8px;">
           <a href="#" class="sidebar-item">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">ACC</span>
             Accueil membre
           </a>
           <a href="#" class="sidebar-item">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">PRF</span>
             Mon profil
           </a>
           <a href="#" class="sidebar-item active">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">ABO</span>
             Abonnement
           </a>
           <a href="#" class="sidebar-item">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">RES</span>
             Réservations
           </a>
           <div class="sidebar-divider"></div>
           <a href="#" class="sidebar-item">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">HST</span>
             Historique
           </a>
           <a href="#" class="sidebar-item">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">FCT</span>
             Factures
           </a>
           <div class="sidebar-divider"></div>
           <a href="index.html" class="sidebar-item" style="margin-top:auto;">
-            <span class="sidebar-icon"
+            <span class="sidebar-icon abbr"
               style="font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:0.06em;">OUT</span>
             Déconnexion
           </a>
@@ -328,8 +518,7 @@
       <!-- CONTENU PRINCIPAL -->
       <main class="dashboard-content">
 
-        <h2
-          style="font-family:var(--font-display); font-size:28px; color:var(--creme); margin-bottom:32px; letter-spacing:0.04em;">
+        <h2 class="dashboard-greeting">
           Bonjour, Mathieu
         </h2>
 
@@ -337,14 +526,14 @@
         <div class="dashboard-cards">
           <div class="dashboard-card">
             <div class="dashboard-card-label">ABONNEMENT</div>
-            <div class="dashboard-card-value" style="font-size:22px; line-height:1.3;">Sans<br>Engagement</div>
+            <div class="dashboard-card-value dashboard-card-value--md">Sans<br>Engagement</div>
             <div style="margin-top:10px;">
               <span class="badge badge-cardio">ACTIF</span>
             </div>
           </div>
           <div class="dashboard-card">
             <div class="dashboard-card-label">PROCHAIN COURS</div>
-            <div class="dashboard-card-value" style="font-size:20px; line-height:1.35;">Yoga<br>· Jeu 18h00</div>
+            <div class="dashboard-card-value dashboard-card-value--md">Yoga<br>· Jeu 18h00</div>
             <div style="margin-top:10px; font-size:12px; color:var(--grege);">Dans 2 jours</div>
           </div>
           <div class="dashboard-card">
@@ -357,6 +546,7 @@
         <!-- Prochaines réservations -->
         <div class="db-section">
           <h3 class="db-section-title">Mes prochaines réservations</h3>
+          <div class="reservations-wrap">
           <table class="reservations-table">
             <thead>
               <tr>
@@ -398,6 +588,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
 
         <!-- Mes factures -->
@@ -435,8 +626,7 @@
             <p>Économisez 20% et profitez de tous les avantages premium — accès illimité, cours réservés, massage
               inclus.</p>
           </div>
-          <a href="03-tarifs.html" class="btn btn-primary" style="white-space:nowrap; flex-shrink:0;">VOIR LES
-            OFFRES</a>
+          <a href="03-tarifs.html" class="btn btn-primary">VOIR LES OFFRES</a>
         </div>
 
       </main>
@@ -504,6 +694,7 @@
 
   <div class="page-indicator">10 · ESPACE MEMBRE</div>
 
+  <script src="responsive.js"></script>
 </body>
 
 </html>

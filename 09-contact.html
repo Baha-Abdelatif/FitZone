@@ -111,6 +111,32 @@
       grid-template-columns: 1fr 1fr;
       min-height: 420px;
     }
+
+    @media (max-width: 810px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-form-card {
+        padding: 32px 24px;
+      }
+
+      .map-section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-card {
+        padding: 24px 16px;
+      }
+    }
   </style>
 </head>
 
@@ -431,6 +457,7 @@
 
   <div class="page-indicator">09 · CONTACT</div>
 
+  <script src="responsive.js"></script>
 </body>
 
 </html>
